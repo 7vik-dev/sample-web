@@ -1,0 +1,856 @@
+<!DOCTYPE html><html lang="en-US" data-pagefind-meta="untranslated:true" data-astro-cid-ju4pidww> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content"><style>
+    @media (prefers-reduced-motion: no-preference) {
+      @view-transition {
+        navigation: auto;
+      }
+    }
+  </style><script>
+    const theme = localStorage.getItem("hacktron.theme")
+    if (theme) document.documentElement.dataset.theme = theme
+    {
+      const arrival = globalThis.navigation?.activation
+      const still = matchMedia("(prefers-reduced-motion: reduce)").matches
+      if (arrival?.from && arrival.navigationType !== "reload" && !still) {
+        const expect = document.createElement("link")
+        Object.assign(expect, { rel: "expect", href: "#content" })
+        expect.setAttribute("blocking", "render")
+        document.head.append(expect)
+      }
+      window.revealed =
+        "onpagereveal" in window
+          ? new Promise((resolve) =>
+              addEventListener(
+                "pagereveal",
+                ({ viewTransition }) =>
+                  viewTransition
+                    ? viewTransition.finished.then(resolve, resolve)
+                    : resolve(),
+                { once: true },
+              ),
+            )
+          : Promise.resolve()
+    }
+  </script><meta name="generator" content="Astro v7.4.7"><meta name="apple-mobile-web-app-title" content="Hacktron"><link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="shortcut icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Hacktron" href="https://www.hacktron.ai/rss.xml"><link rel="preload" href="/_astro/recursive-latin.Csm56meH.woff2" as="font" type="font/woff2" crossorigin> <title>Changelog | Hacktron Docs</title> <meta name="description" content="Features, improvements, and fixes."> <link rel="canonical" href="https://www.hacktron.ai/docs/changelog">   <meta property="og:title" content="Changelog | Hacktron Docs"> <meta property="og:description" content="Features, improvements, and fixes."> <meta property="og:url" content="https://www.hacktron.ai/docs/changelog"> <meta property="og:type" content="website"> <meta property="og:site_name" content="Hacktron"> <meta property="og:locale" content="en_US">  <meta property="og:image" content="https://www.hacktron.ai/og/en/docs/changelog.jpg?v=49b9f85f"> <meta property="og:image:width" content="1200"> <meta property="og:image:height" content="630"> <meta property="og:image:alt" content="Changelog | Hacktron Docs"> <meta name="twitter:card" content="summary_large_image"> <meta name="twitter:site" content="@HacktronAI"> <meta name="twitter:title" content="Changelog | Hacktron Docs"> <meta name="twitter:description" content="Features, improvements, and fixes."> <meta name="twitter:image" content="https://www.hacktron.ai/og/en/docs/changelog.jpg?v=49b9f85f"> <meta name="twitter:image:alt" content="Changelog | Hacktron Docs">  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.hacktron.ai/#organization","name":"Hacktron AI","url":"https://www.hacktron.ai/","logo":"https://www.hacktron.ai/web-app-manifest-512x512.png","sameAs":["https://www.linkedin.com/company/hacktron/","https://x.com/HacktronAI","https://github.com/hacktronai","https://discord.gg/eRHCHsvDKh"]},{"@type":"WebSite","@id":"https://www.hacktron.ai/#website","name":"Hacktron","url":"https://www.hacktron.ai/","publisher":{"@id":"https://www.hacktron.ai/#organization"}}]}</script> <link rel="stylesheet" href="/_astro/Listen.T3hjvxQ9.css"><link rel="stylesheet" href="/_astro/_..C92Flbpx.css"><style>form-challenge[data-astro-cid-cecrdcxe]{display:block}
+</style><link rel="stylesheet" href="/_astro/Layout.BbsKKxQo.css"><style>share-menu[data-astro-cid-ja3clqie]{flex-wrap:wrap;align-items:baseline;column-gap:24px;display:flex}button[data-astro-cid-ja3clqie]{background:0 0;border:0;padding:0}[data-astro-cid-ja3clqie][data-toggle]{white-space:nowrap;text-underline-offset:.2em;text-decoration:underline 1px}[data-astro-cid-ja3clqie][data-inline]{display:none;@media (width>=1024px){[data-astro-cid-ja3clqie][aria-expanded=true]+&{display:block}}& :is(a,button){white-space:nowrap;text-decoration:none;&:is(:hover,:focus-visible){text-underline-offset:.2em;text-decoration:underline 1px}}}dialog[data-astro-cid-ja3clqie]{width:100%;max-width:none;padding:32px var(--margin);color:inherit;text-align:center;background:var(--background);border:0;margin:auto 0 0;&>p[data-astro-cid-ja3clqie]+p[data-astro-cid-ja3clqie]{max-width:340px;margin-inline:auto}}share-actions[data-astro-cid-ja3clqie]{flex-wrap:wrap;justify-content:center;gap:.5em 1em;margin-top:72px;display:flex;& :is(a,button){text-underline-offset:.18em;text-decoration:underline 1px}}
+</style><script type="module" src="/_astro/page.cNngjUgL.js"></script></head><script type="module">addEventListener(`pageswap`,({viewTransition:e})=>{e&&document.querySelector(`dialog[open]`)&&(e.ready.catch(()=>{}),e.skipTransition())});</script> <body data-astro-cid-ju4pidww> <section id="announcement" aria-label="Announcement" data-astro-cid-h4bjbk3l> <announcement-bar data-container="true" data-astro-cid-h4bjbk3l="true"> <p data-astro-cid-h4bjbk3l>OpenAI is partnering with Hacktron to find vulnerabilities in its systems. <a href="/blog/openai-partnership">Read the announcement.</a></p> <button type="button" aria-label="Dismiss" data-astro-cid-h4bjbk3l> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true" data-astro-cid-h4bjbk3l="true"><path d="M4 4l8 8M12 4l-8 8" /></svg> </button> </announcement-bar> </section> <script>(function(){const id = "openai-partnership";
+
+  const banner = document.getElementById("announcement")
+  const root = document.documentElement.style
+  let height = 0
+  const place = () =>
+    root.setProperty(
+      "--announcement-offset",
+      `${Math.max(0, height - scrollY)}px`,
+    )
+  try {
+    banner.hidden = localStorage.getItem("hacktron.announcement") === id
+  } catch {}
+  new ResizeObserver(() => {
+    height = banner.offsetHeight
+    root.setProperty("--announcement-height", `${height}px`)
+    place()
+  }).observe(banner)
+  addEventListener("scroll", place, { passive: true })
+  banner.querySelector("button").addEventListener("click", () => {
+    banner.hidden = true
+    try {
+      localStorage.setItem("hacktron.announcement", id)
+    } catch {}
+  })
+})();</script> <header data-astro-cid-nen7h5rs> <a href="#content" data-sr-only data-skip data-astro-cid-nen7h5rs>Skip to content</a> <header-bar data-container="true" data-astro-cid-nen7h5rs="true"> <a href="/" data-logo="word" data-astro-cid-nen7h5rs><span data-sr-only data-astro-cid-nen7h5rs>Hacktron</span></a> <header-actions data-astro-cid-nen7h5rs="true"> <a href="https://app.hacktron.ai/auth/login" data-button data-sign-in aria-keyshortcuts="S" data-astro-cid-nen7h5rs>Sign in
+[S]</a> <button type="button" data-button data-menu-text commandfor="menu" command="show-modal" aria-keyshortcuts="M" data-astro-cid-nen7h5rs> Menu
+[M]
+</button> <button type="button" data-button data-menu-icon commandfor="menu" command="show-modal" aria-label="Open menu" data-astro-cid-nen7h5rs> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" data-astro-cid-nen7h5rs="true"><path d="M3 6.5h10M3 9.5h10" /></svg> </button> </header-actions> </header-bar> </header><script type="module">var e=scrollY,t=0;addEventListener(`scroll`,()=>{let n=scrollY-e;e=scrollY,t=Math.sign(n)===Math.sign(t)?t+n:n;let r=document.documentElement;scrollY<=0||t>=50?r.removeAttribute(`data-header-pinned`):t<=-50&&r.setAttribute(`data-header-pinned`,``)},{passive:!0});</script>  <script src="/analytics.js" data-consent-key="hacktron-cookie-consent"></script> <script defer src="/_vercel/insights/script.js"></script> <script defer src="/_vercel/speed-insights/script.js"></script>  <cookie-consent id="cookie-settings" hidden="true" role="region" aria-label="Cookie choice" data-astro-cid-5krk3x6l="true"> <p data-astro-cid-5krk3x6l>We use optional cookies to measure site traffic.</p> <p data-astro-cid-5krk3x6l> <button type="button" data-consent="accepted" data-astro-cid-5krk3x6l>Accept</button> <button type="button" data-consent="rejected" data-astro-cid-5krk3x6l>Reject</button> <a href="/cookie-notice" data-astro-cid-5krk3x6l>Cookie notice</a> </p> </cookie-consent> <script>(function(){const key = "hacktron-cookie-consent";
+
+  try {
+    document.getElementById("cookie-settings").hidden =
+      localStorage.getItem(key) !== null
+  } catch {}
+})();</script><script type="module" src="/_astro/Analytics.astro_astro_type_script_index_0_lang.HEU0XvBc.js"></script> <dialog id="menu" aria-label="Menu" autofocus data-astro-cid-xrc56gie> <menu-top data-container="true" data-astro-cid-xrc56gie="true"> <a href="/" data-logo="mark" tabindex="-1" aria-hidden="true" data-astro-cid-xrc56gie></a> <a href="/" data-logo="word" data-astro-cid-xrc56gie><span data-sr-only data-astro-cid-xrc56gie>Hacktron</span></a> <menu-actions data-astro-cid-xrc56gie="true"> <a href="https://app.hacktron.ai/auth/login" data-button data-sign-in data-astro-cid-xrc56gie>Sign in [S]</a> <button type="button" data-button data-menu-close commandfor="menu" command="close" aria-label="Close menu" data-astro-cid-xrc56gie> <span aria-hidden="true" data-astro-cid-xrc56gie>Menu [M]</span> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" data-astro-cid-xrc56gie="true"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9" /></svg> </button> </menu-actions> </menu-top> <nav data-grid aria-label="Main" data-astro-cid-xrc56gie> <menu-column data-astro-cid-xrc56gie="true"> <menu-row data-astro-cid-xrc56gie="true"> <a href="/about" data-plain-link data-section class="astro-xrc56gie" data-astro-cid-xrc56gie> About  </a> <menu-subnav data-astro-cid-xrc56gie="true"> <a href="/team" data-plain-link data-astro-cid-xrc56gie> Team </a><a href="/careers" data-plain-link data-astro-cid-xrc56gie> Careers </a><a href="/media" data-plain-link data-astro-cid-xrc56gie> Media </a><a href="/faq" data-plain-link data-astro-cid-xrc56gie> FAQ </a><a href="/contact" data-plain-link data-astro-cid-xrc56gie> Contact </a> </menu-subnav> </menu-row> </menu-column><menu-column data-astro-cid-xrc56gie="true"> <menu-row data-astro-cid-xrc56gie="true"> <a href="/blog" data-plain-link data-section class="astro-xrc56gie" data-astro-cid-xrc56gie> Blog  </a>  </menu-row><menu-row data-astro-cid-xrc56gie="true"> <a href="/customers" data-plain-link data-section class="astro-xrc56gie" data-astro-cid-xrc56gie> Customers  </a>  </menu-row> </menu-column><menu-column data-astro-cid-xrc56gie="true"> <menu-row data-astro-cid-xrc56gie="true"> <span data-astro-cid-xrc56gie>Products</span> <menu-subnav data-astro-cid-xrc56gie="true"> <a href="/products/red" data-plain-link data-product="red" data-astro-cid-xrc56gie> Red </a><a href="/products/whitebox" data-plain-link data-product="whitebox" data-astro-cid-xrc56gie> Whitebox </a><a href="/products/review" data-plain-link data-product="review" data-astro-cid-xrc56gie> Review </a><a href="/products/automations" data-plain-link data-astro-cid-xrc56gie> Automations </a> </menu-subnav> </menu-row><menu-row data-astro-cid-xrc56gie="true"> <a href="/#pricing" data-plain-link data-section class="astro-xrc56gie" data-astro-cid-xrc56gie> Pricing  </a>  </menu-row> </menu-column><menu-column data-astro-cid-xrc56gie="true"> <menu-row data-astro-cid-xrc56gie="true"> <a href="/docs" data-plain-link data-section class="astro-xrc56gie" data-astro-cid-xrc56gie> Docs  </a>  </menu-row><details data-astro-cid-xrc56gie> <summary data-astro-cid-xrc56gie> Tools <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" data-astro-cid-xrc56gie="true"><path d="M4 6l4 4 4-4" /></svg> </summary> <menu-subnav data-astro-cid-xrc56gie="true"> <a href="/tools/advisories" data-plain-link data-astro-cid-xrc56gie> Advisories </a><a href="/tools/security-changelog/nextjs" data-plain-link data-astro-cid-xrc56gie> Security changelog </a><a href="/tools/package" data-plain-link data-astro-cid-xrc56gie> Package scanner </a> </menu-subnav> </details><details data-astro-cid-xrc56gie> <summary data-astro-cid-xrc56gie> Initiatives <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" data-astro-cid-xrc56gie="true"><path d="M4 6l4 4 4-4" /></svg> </summary> <menu-subnav data-astro-cid-xrc56gie="true"> <a href="/initiatives/no-pwn-no-pay" data-plain-link data-astro-cid-xrc56gie> No Pwn, No Pay </a><a href="/initiatives/open-source" data-plain-link data-astro-cid-xrc56gie> Open source </a> </menu-subnav> </details> </menu-column> </nav> <menu-steps data-astro-cid-xrc56gie="true"> <menu-step data-first="true" data-astro-cid-xrc56gie="true"> <button type="button" data-to="0" data-astro-cid-xrc56gie> Products <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" data-astro-cid-xrc56gie="true"><path d="M4 6l4 4 4-4" /></svg> </button><a href="/customers" class="astro-xrc56gie" data-astro-cid-xrc56gie> Customers  </a><a href="/blog" class="astro-xrc56gie" data-astro-cid-xrc56gie> Blog  </a><a href="/docs" class="astro-xrc56gie" data-astro-cid-xrc56gie> Docs  </a><button type="button" data-to="1" data-astro-cid-xrc56gie> Company <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" data-astro-cid-xrc56gie="true"><path d="M4 6l4 4 4-4" /></svg> </button><a href="/contact" class="astro-xrc56gie" data-astro-cid-xrc56gie> Contact  </a> <menu-quiet data-astro-cid-xrc56gie="true"> <button type="button" data-to="2" data-astro-cid-xrc56gie> Resources <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" data-astro-cid-xrc56gie="true"><path d="M4 6l4 4 4-4" /></svg> </button><button type="button" data-to="3" data-astro-cid-xrc56gie> Initiatives <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" data-astro-cid-xrc56gie="true"><path d="M4 6l4 4 4-4" /></svg> </button><button type="button" data-to="4" data-astro-cid-xrc56gie> Legal <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" data-astro-cid-xrc56gie="true"><path d="M4 6l4 4 4-4" /></svg> </button> </menu-quiet> <a href="https://app.hacktron.ai/auth/login" data-button data-sign-in data-astro-cid-xrc56gie>Sign in</a> </menu-step> <menu-step hidden="true" data-astro-cid-xrc56gie="true"> <button type="button" data-back data-astro-cid-xrc56gie> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" data-astro-cid-xrc56gie="true"><path d="M4 6l4 4 4-4" /></svg> Products </button> <a href="/products/red" data-astro-cid-xrc56gie> <span data-product="red" data-astro-cid-xrc56gie>Red</span> </a><a href="/products/whitebox" data-astro-cid-xrc56gie> <span data-product="whitebox" data-astro-cid-xrc56gie>Whitebox</span> </a><a href="/products/review" data-astro-cid-xrc56gie> <span data-product="review" data-astro-cid-xrc56gie>Review</span> </a><a href="/products/automations" data-astro-cid-xrc56gie> <span data-astro-cid-xrc56gie>Automations</span> </a><a href="/#pricing" data-astro-cid-xrc56gie> <span data-astro-cid-xrc56gie>Pricing</span> </a> </menu-step><menu-step hidden="true" data-astro-cid-xrc56gie="true"> <button type="button" data-back data-astro-cid-xrc56gie> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" data-astro-cid-xrc56gie="true"><path d="M4 6l4 4 4-4" /></svg> Company </button> <a href="/about" data-astro-cid-xrc56gie> <span data-astro-cid-xrc56gie>About</span> </a><a href="/team" data-astro-cid-xrc56gie> <span data-astro-cid-xrc56gie>Team</span> </a><a href="/careers" data-astro-cid-xrc56gie> <span data-astro-cid-xrc56gie>Careers</span> </a><a href="/media" data-astro-cid-xrc56gie> <span data-astro-cid-xrc56gie>Media</span> </a><a href="/trust" data-astro-cid-xrc56gie> <span data-astro-cid-xrc56gie>Trust</span> </a> </menu-step><menu-step hidden="true" data-astro-cid-xrc56gie="true"> <button type="button" data-back data-astro-cid-xrc56gie> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" data-astro-cid-xrc56gie="true"><path d="M4 6l4 4 4-4" /></svg> Resources </button> <a href="/faq" data-astro-cid-xrc56gie> <span data-astro-cid-xrc56gie>FAQ</span> </a><a href="/tools/advisories" data-astro-cid-xrc56gie> <span data-astro-cid-xrc56gie>Advisories</span> </a><a href="/tools/security-changelog/nextjs" data-astro-cid-xrc56gie> <span data-astro-cid-xrc56gie>Security changelog</span> </a><a href="/tools/package" data-astro-cid-xrc56gie> <span data-astro-cid-xrc56gie>Package scanner</span> </a><a href="/status" data-astro-cid-xrc56gie> <span data-astro-cid-xrc56gie>Status</span> </a> </menu-step><menu-step hidden="true" data-astro-cid-xrc56gie="true"> <button type="button" data-back data-astro-cid-xrc56gie> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" data-astro-cid-xrc56gie="true"><path d="M4 6l4 4 4-4" /></svg> Initiatives </button> <a href="/initiatives/no-pwn-no-pay" data-astro-cid-xrc56gie> <span data-astro-cid-xrc56gie>No Pwn, No Pay</span> </a><a href="/initiatives/open-source" data-astro-cid-xrc56gie> <span data-astro-cid-xrc56gie>Open source</span> </a> </menu-step><menu-step hidden="true" data-astro-cid-xrc56gie="true"> <button type="button" data-back data-astro-cid-xrc56gie> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" data-astro-cid-xrc56gie="true"><path d="M4 6l4 4 4-4" /></svg> Legal </button> <a href="/terms-of-service" data-astro-cid-xrc56gie> <span data-astro-cid-xrc56gie>Terms</span> </a><a href="/privacy-policy" data-astro-cid-xrc56gie> <span data-astro-cid-xrc56gie>Privacy</span> </a><a href="/cookie-notice" data-astro-cid-xrc56gie> <span data-astro-cid-xrc56gie>Cookies</span> </a><a href="/master-services-agreement" data-astro-cid-xrc56gie> <span data-astro-cid-xrc56gie>MSA</span> </a><a href="/service-level-agreement" data-astro-cid-xrc56gie> <span data-astro-cid-xrc56gie>SLA</span> </a><a href="/disclosure-policy" data-astro-cid-xrc56gie> <span data-astro-cid-xrc56gie>Disclosure</span> </a><a href="/credits" data-astro-cid-xrc56gie> <span data-astro-cid-xrc56gie>Credits</span> </a> </menu-step> </menu-steps> </dialog><script type="module">var e=document.querySelector(`#menu`),t=document.querySelector(`[data-menu-text]`),n=[...e.querySelectorAll(`menu-step`)],r=e=>{for(let t of n)t.hidden=t!==e;e.querySelector(`a, button`)?.focus()};e.addEventListener(`click`,t=>{let i=t.target;if(i===e)return e.close();let a=i.closest(`[data-to], [data-back]`);if(!a)return;let o=a.dataset.to;r(o===void 0?n[0]:n[Number(o)+1])}),e.addEventListener(`close`,()=>{for(let e of n)e.hidden=e!==n[0]}),e.addEventListener(`keydown`,t=>{if(t.metaKey||t.ctrlKey||t.altKey||t.repeat)return;let n=t.key.toLowerCase(),r=[...e.querySelectorAll(`nav a, nav summary`)],i=r.indexOf(document.activeElement);if(n===`m`)e.close();else if(n===`j`||n===`arrowdown`)r[i+1]?.focus();else if(n===`k`||n===`arrowup`)r[Math.max(i-1,0)]?.focus();else{let t=[...e.querySelectorAll(`nav [data-section]`)].find(e=>e.textContent?.trim().toLowerCase().startsWith(n));if(!t||n.length!==1)return;t.click()}t.preventDefault()});var i=0,a=!0,o=0,s=(e,t)=>{clearTimeout(o),o=window.setTimeout(t,e)};document.addEventListener(`pointermove`,e=>{t.contains(e.target)||(a=!0)},{passive:!0}),t.addEventListener(`pointerenter`,t=>{t.pointerType===`mouse`&&!e.open&&a&&s(120,()=>{e.showModal(),i=Date.now()})}),t.addEventListener(`pointerleave`,()=>clearTimeout(o)),e.addEventListener(`pointerenter`,()=>clearTimeout(o)),e.addEventListener(`pointerleave`,t=>{i&&t.pointerType===`mouse`&&s(350,()=>e.close())}),e.addEventListener(`close`,()=>{clearTimeout(o),i=0,a=!1}),e.querySelector(`[command=close]`)?.addEventListener(`click`,e=>{Date.now()-i<500&&e.preventDefault()},{capture:!0});</script> <script type="module">var e=[1,1.2,1.5,2],t=e=>{let t=Math.floor(e);return`${Math.floor(t/60)}:${String(t%60).padStart(2,`0`)}`},n=class extends HTMLElement{connectedCallback(){let n=this.querySelector(`[data-length]`),r=this.querySelector(`[data-play]`),i=this.querySelector(`[data-rate]`),a=new Audio,o=JSON.parse(this.dataset.copy??`{}`),s=e=>r.textContent=`${e} [L]`,c=()=>{a.removeAttribute(`src`),n.textContent=o.unavailable,s(o.listen)},l=()=>{Number.isFinite(a.duration)&&(n.textContent=`${t(a.currentTime)} / ${t(a.duration)}`)};r.addEventListener(`click`,()=>{if(!a.paused)return a.pause();a.getAttribute(`src`)||(a.src=`/api/listen?hash=${this.dataset.hash}`,n.textContent=o.loading),a.play().catch(e=>{e.name!==`AbortError`&&c()})}),i.addEventListener(`click`,()=>{let t=e[(e.indexOf(a.playbackRate)+1)%e.length];a.playbackRate=t,i.textContent=`${t}×`}),a.addEventListener(`play`,()=>s(o.pause)),a.addEventListener(`pause`,()=>s(a.ended?o.listen:o.resume)),a.addEventListener(`playing`,()=>i.hidden=!1),a.addEventListener(`loadedmetadata`,l),a.addEventListener(`timeupdate`,l),a.addEventListener(`error`,c)}};customElements.define(`listen-control`,n);</script><script type="module">var e,t=()=>e??=new Promise((e,t)=>{let n=Object.assign(document.createElement(`script`),{src:`https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit`,onload:()=>e(window.turnstile),onerror:()=>t(Error(`Turnstile failed to load`))});document.head.append(n)}),n=class extends HTMLElement{#e=``;#t=Promise.withResolvers();async connectedCallback(){try{this.#e=(await t()).render(this,{sitekey:this.dataset.sitekey,appearance:`interaction-only`,theme:`auto`,callback:()=>this.#t.resolve()})}catch(e){console.error(e),this.#t.resolve()}}ready=()=>Promise.race([this.#t.promise,new Promise(e=>setTimeout(e,15e3))]);reset(){this.#t=Promise.withResolvers(),this.#e&&window.turnstile?.reset(this.#e)}};customElements.define(`form-challenge`,n);</script><script type="module" src="/_astro/Ask.astro_astro_type_script_index_0_lang.DitPtNhB.js"></script><script type="module">async function e(e){let t=await fetch(e);if(!t.ok)throw Error(`Could not load ${e} (${t.status})`);return new Blob([await t.text()],{type:`text/plain`})}var t=class extends HTMLElement{connectedCallback(){let t=this.querySelector(`[data-toggle]`),n=this.querySelector(`dialog`);t.addEventListener(`click`,()=>{if(!matchMedia(`(width >= 1024px)`).matches)return n.showModal();t.ariaExpanded=String(t.ariaExpanded!==`true`)}),n.addEventListener(`click`,e=>{e.target===n&&n.close()}),this.addEventListener(`click`,async t=>{let n=t.target.closest(`[data-copy], [data-copy-file]`);if(!n)return;let{copy:r,copyFile:i}=n.dataset,a=i?e(i):Promise.resolve(new Blob([r??``],{type:`text/plain`}));await navigator.clipboard.write([new ClipboardItem({"text/plain":a})]);let o=n.textContent;n.textContent=this.dataset.copied??``,setTimeout(()=>n.textContent=o,1500)})}};customElements.define(`share-menu`,t);</script><script type="module" src="/_astro/Article.astro_astro_type_script_index_0_lang.CfIppKxg.js"></script><script type="module">var e=document.querySelector(`nav[data-contents]`),t=document.querySelector(`prose-content`),n=[...e?.querySelectorAll(`a`)??[]],r=n.map(e=>document.getElementById(decodeURIComponent(e.hash.slice(1)))),i=Number.parseFloat(getComputedStyle(document.documentElement).scrollPaddingBlockStart),a=scrollY,o=!0,s=``;function c(t){let n=t[0],r=t.at(-1);if(!e||!n||!r||!t.every(e=>e.checkVisibility()))return;let i=e.getBoundingClientRect(),a=(n.getBoundingClientRect().top+r.getBoundingClientRect().bottom)/2;e.scrollTo({top:e.scrollTop+a-(i.top+i.height/2)})}function l(){scrollY!==a&&(o=scrollY>a),a=scrollY;let e=r.map(e=>e?.getBoundingClientRect().top??0),l=t.getBoundingClientRect().bottom,u=n.filter((t,n)=>e[n]<innerHeight&&(e[n+1]??l)>i),d=u.map(e=>e.hash).join(` `);if(d===s)return;s=d;let f=u.some(e=>!e.hasAttribute(`data-active`)),p=o?u.at(-1):u[0];for(let e of n)e.toggleAttribute(`data-active`,u.includes(e)),e.toggleAttribute(`data-leading`,e===p);f&&c(u)}e&&(addEventListener(`scroll`,l,{passive:!0}),l(),e.addEventListener(`click`,t=>{if(!t.target.closest(`a`))return;let n=e.querySelector(`details`);n&&!matchMedia(`(width >= 1024px)`).matches&&(n.open=!1)}));</script><script type="module" src="/_astro/StatusMark.astro_astro_type_script_index_0_lang.BjTkNu_A.js"></script><page-content id="content" data-astro-cid-ju4pidww="true"> <main data-pagefind-body data-pagefind-meta="url:/docs/changelog" data-pagefind-filter="section:docs" data-astro-cid-ju4pidww>   <article data-grid data-title data-astro-cid-scd62v54> <header data-astro-cid-scd62v54><nav aria-label="Docs" data-astro-cid-gfcwjq6c> <details data-astro-cid-gfcwjq6c> <summary data-astro-cid-gfcwjq6c>Changelog</summary> <ul data-astro-cid-gfcwjq6c> <li data-astro-cid-gfcwjq6c> <a href="/docs" data-astro-cid-gfcwjq6c> Platform </a> </li><li data-astro-cid-gfcwjq6c> <a href="/docs/review" data-astro-cid-gfcwjq6c> <span data-product="review">Review</span> </a> </li><li data-astro-cid-gfcwjq6c> <a href="/docs/whitebox" data-astro-cid-gfcwjq6c> <span data-product="whitebox">Whitebox</span> </a> </li><li data-astro-cid-gfcwjq6c> <a href="/docs/api" data-astro-cid-gfcwjq6c> API </a> </li><li data-astro-cid-gfcwjq6c> <a href="/docs/mcp" data-astro-cid-gfcwjq6c> MCP </a> </li><li data-astro-cid-gfcwjq6c> <a href="/docs/changelog" aria-current="true" data-astro-cid-gfcwjq6c> Changelog </a> </li> </ul>  </details> </nav></header> <article-title data-astro-cid-scd62v54="true"> <h1 data-astro-cid-gfcwjq6c>Changelog</h1><docs-actions slot="title" data-astro-cid-gfcwjq6c="true"> <listen-control data-hash="f089bc076e7e4250f685c65315cbebac2349f6448d25666d62023392f99bc078" data-copy="{&quot;listen&quot;:&quot;Listen&quot;,&quot;pause&quot;:&quot;Pause&quot;,&quot;resume&quot;:&quot;Resume&quot;,&quot;loading&quot;:&quot;Loading&quot;,&quot;unavailable&quot;:&quot;Unavailable&quot;}" data-astro-cid-sssdaxvi="true"> <span data-length data-astro-cid-sssdaxvi>35 min</span> <button type="button" aria-keyshortcuts="L" data-play data-astro-cid-sssdaxvi> Listen
+[L]
+</button> <button type="button" data-rate hidden data-astro-cid-sssdaxvi>1×</button> </listen-control> <button type="button" commandfor="ask" command="show-modal" aria-keyshortcuts="A" data-ask data-astro-cid-l2gncxap>
+Ask [A]
+</button> <button type="button" popover="manual" commandfor="ask" command="show-modal" data-button data-quote-hint data-astro-cid-l2gncxap>
+Ask about this [A]
+</button> <dialog id="ask" aria-label="Ask" data-astro-cid-l2gncxap> <sheet-close data-astro-cid-l2gncxap="true"> <button type="button" data-button commandfor="ask" command="close" aria-label="Close" data-astro-cid-l2gncxap> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true" data-astro-cid-l2gncxap="true"><path d="M4 4l8 8M12 4l-8 8" /></svg> </button> </sheet-close> <ol tabindex="0" aria-label="Conversation" hidden data-astro-cid-l2gncxap></ol> <form data-astro-cid-l2gncxap> <ask-quote hidden="true" data-astro-cid-l2gncxap="true"> <q tabindex="0" data-astro-cid-l2gncxap></q> <button type="button" aria-label="Remove quote" data-astro-cid-l2gncxap><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true" data-astro-cid-l2gncxap="true"><path d="M4 4l8 8M12 4l-8 8" /></svg></button> </ask-quote> <textarea rows="3" placeholder="Ask a question" aria-label="Question" maxlength="1000" autofocus data-astro-cid-l2gncxap></textarea> <ask-actions data-astro-cid-l2gncxap="true"> <button type="button" data-clear hidden data-astro-cid-l2gncxap>Clear</button> <button type="submit" data-astro-cid-l2gncxap>Send</button> </ask-actions> </form> <template data-astro-cid-l2gncxap><form-challenge data-sitekey="0x4AAAAAAF08zt8GQcJoVAOh" data-astro-cid-cecrdcxe="true"></form-challenge></template> </dialog> <share-menu data-copied="Copied" data-astro-cid-ja3clqie="true"> <button type="button" data-toggle aria-expanded="false" aria-keyshortcuts="C" data-astro-cid-ja3clqie> Copy page [C] </button> <span data-inline data-astro-cid-ja3clqie> <button type="button" data-copy-file="/docs/changelog.md" data-astro-cid-ja3clqie> Markdown </button>, <a href="/docs/changelog.md" target="_blank" rel="noopener noreferrer" class="astro-ja3clqie" data-astro-cid-ja3clqie>View</a>, <a href="https://chatgpt.com/?hints=search&amp;q=Read%20https%3A%2F%2Fwww.hacktron.ai%2Fdocs%2Fchangelog.md%20so%20I%20can%20ask%20questions%20about%20it." target="_blank" rel="noopener noreferrer" class="astro-ja3clqie" data-astro-cid-ja3clqie>ChatGPT</a>, <a href="https://claude.ai/new?q=Read%20https%3A%2F%2Fwww.hacktron.ai%2Fdocs%2Fchangelog.md%20so%20I%20can%20ask%20questions%20about%20it." target="_blank" rel="noopener noreferrer" class="astro-ja3clqie" data-astro-cid-ja3clqie>Claude</a>, <a href="https://www.perplexity.ai/search?q=Read%20https%3A%2F%2Fwww.hacktron.ai%2Fdocs%2Fchangelog.md%20so%20I%20can%20ask%20questions%20about%20it." target="_blank" rel="noopener noreferrer" class="astro-ja3clqie" data-astro-cid-ja3clqie>Perplexity</a> </span> <dialog aria-label="Copy page" data-astro-cid-ja3clqie> <p data-astro-cid-ja3clqie>Copy page</p> <p data-astro-cid-ja3clqie>Changelog</p> <share-actions data-astro-cid-ja3clqie="true"> <button type="button" data-copy-file="/docs/changelog.md" data-astro-cid-ja3clqie> Copy Markdown </button><a href="/docs/changelog.md" target="_blank" rel="noopener noreferrer" class="astro-ja3clqie astro-ja3clqie" data-astro-cid-ja3clqie>View Markdown</a><a href="https://chatgpt.com/?hints=search&amp;q=Read%20https%3A%2F%2Fwww.hacktron.ai%2Fdocs%2Fchangelog.md%20so%20I%20can%20ask%20questions%20about%20it." target="_blank" rel="noopener noreferrer" class="astro-ja3clqie astro-ja3clqie" data-astro-cid-ja3clqie>Open in ChatGPT</a><a href="https://claude.ai/new?q=Read%20https%3A%2F%2Fwww.hacktron.ai%2Fdocs%2Fchangelog.md%20so%20I%20can%20ask%20questions%20about%20it." target="_blank" rel="noopener noreferrer" class="astro-ja3clqie astro-ja3clqie" data-astro-cid-ja3clqie>Open in Claude</a><a href="https://www.perplexity.ai/search?q=Read%20https%3A%2F%2Fwww.hacktron.ai%2Fdocs%2Fchangelog.md%20so%20I%20can%20ask%20questions%20about%20it." target="_blank" rel="noopener noreferrer" class="astro-ja3clqie astro-ja3clqie" data-astro-cid-ja3clqie>Open in Perplexity</a> </share-actions> </dialog> </share-menu> </docs-actions> </article-title>  <nav aria-label="Contents" data-contents data-astro-cid-scd62v54> <details data-astro-cid-scd62v54> <summary data-astro-cid-scd62v54>Contents</summary> <ol data-astro-cid-scd62v54> <li data-depth="2" data-astro-cid-scd62v54> <a href="#november-8-2026" data-astro-cid-scd62v54>  November 8, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#november-5-2026" data-astro-cid-scd62v54>  November 5, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#october-27-2026" data-astro-cid-scd62v54>  October 27, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#october-21-2026" data-astro-cid-scd62v54>  October 21, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#october-9-2026" data-astro-cid-scd62v54>  October 9, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#september-25-2026" data-astro-cid-scd62v54>  September 25, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#september-22-2026" data-astro-cid-scd62v54>  September 22, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#september-18-2026" data-astro-cid-scd62v54>  September 18, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#august-19-2026" data-astro-cid-scd62v54>  August 19, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#august-3-2026" data-astro-cid-scd62v54>  August 3, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#july-15-2026" data-astro-cid-scd62v54>  July 15, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#june-23-2026" data-astro-cid-scd62v54>  June 23, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#june-18-2026" data-astro-cid-scd62v54>  June 18, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#june-15-2026" data-astro-cid-scd62v54>  June 15, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#june-11-2026" data-astro-cid-scd62v54>  June 11, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#june-10-2026" data-astro-cid-scd62v54>  June 10, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#june-7-2026" data-astro-cid-scd62v54>  June 7, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#june-3-2026" data-astro-cid-scd62v54>  June 3, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#june-1-2026" data-astro-cid-scd62v54>  June 1, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#may-26-2026" data-astro-cid-scd62v54>  May 26, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#may-19-2026" data-astro-cid-scd62v54>  May 19, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#may-16-2026" data-astro-cid-scd62v54>  May 16, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#may-15-2026" data-astro-cid-scd62v54>  May 15, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#may-13-2026" data-astro-cid-scd62v54>  May 13, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#may-4-2026" data-astro-cid-scd62v54>  May 4, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#april-23-2026" data-astro-cid-scd62v54>  April 23, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#april-20-2026" data-astro-cid-scd62v54>  April 20, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#april-6-2026" data-astro-cid-scd62v54>  April 6, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#march-23-2026" data-astro-cid-scd62v54>  March 23, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#march-18-2026" data-astro-cid-scd62v54>  March 18, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#march-1-2026" data-astro-cid-scd62v54>  March 1, 2026 </a> </li><li data-depth="2" data-astro-cid-scd62v54> <a href="#february-18-2026" data-astro-cid-scd62v54>  February 18, 2026 </a> </li> </ol> </details> </nav> <prose-content data-astro-cid-scd62v54="true">    <h2 id="november-8-2026"><a href="#november-8-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>November 8, 2026</h2>
+<h3 id="platform"><a href="#platform" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li><a href="/docs/platform/slack-assistant">Hacktron in Slack</a> now runs scripts in its own sandbox per thread, with web search, access to code hosts and package registries, and one-time approval for other hosts.</li>
+<li>Hacktron in Slack now checks whether a CVE or advisory affects your repositories from their manifests and lock files, including transitive dependencies, and threads get three times the usage budget.</li>
+<li>Hacktron in Slack can now set up pentests of public GitHub repositories from their URL, without you connecting them first.</li>
+<li>Hacktron in Slack now reacts with eyes to each message it will reply to, and tells Slack Connect guests how to use Hacktron from their own workspace.</li>
+</ul>
+<h2 id="november-5-2026"><a href="#november-5-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>November 5, 2026</h2>
+<h3 id="review"><a href="#review" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li>
+<p>Finding IDs such as <code>ACME-FD-12</code> that you mention in a pull request description or comment now become links to the finding on GitHub, GitLab, Bitbucket, and Azure DevOps.</p>
+</li>
+<li>
+<p>New <a href="/docs/platform/organization-settings"><strong>Update check statuses in source control</strong></a> setting lets you turn off Hacktron check statuses on GitHub, GitLab, Bitbucket, and Azure DevOps separately from review comments.</p>
+<figure data-shot="" style="--w: 1016; --h: 352; --inset: 20"><picture data-theme-asset="light"><source type="image/avif" srcset="/shots/platform/organization-settings/code_review_comments/light.9c385057.1280.avif 1280w /shots/platform/organization-settings/code_review_comments/light.9c385057.2032.avif 2032w" sizes="(width >= 1752px) calc((822px) * 1.0410), (width >= 1024px) calc((50vw - 36px) * 1.0410), (width >= 600px) calc((100vw - 48px) * 1.0410), calc((100vw - 32px) * 1.0410)"><img src="/shots/platform/organization-settings/code_review_comments/light.9c385057.webp" alt="Source control, with Update check statuses in source control, Post comments to source control and Post system comments turned on" width="1016" height="352" loading="lazy" decoding="async"></picture><picture data-theme-asset="dark"><source type="image/avif" srcset="/shots/platform/organization-settings/code_review_comments/dark.c37a0d2b.1280.avif 1280w /shots/platform/organization-settings/code_review_comments/dark.c37a0d2b.2032.avif 2032w" sizes="(width >= 1752px) calc((822px) * 1.0410), (width >= 1024px) calc((50vw - 36px) * 1.0410), (width >= 600px) calc((100vw - 48px) * 1.0410), calc((100vw - 32px) * 1.0410)"><img src="/shots/platform/organization-settings/code_review_comments/dark.c37a0d2b.webp" alt="Source control, with Update check statuses in source control, Post comments to source control and Post system comments turned on" width="1016" height="352" loading="lazy" decoding="async"></picture><figcaption>Source control, with Update check statuses in source control, Post comments to source control and Post system comments turned on</figcaption></figure>
+</li>
+</ul>
+<h3 id="platform-1"><a href="#platform-1" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li>
+<p>New <a href="/docs/platform/slack-assistant">Hacktron in Slack</a> agent answers questions about findings, scans, your code, threat models, and the docs, and sets up pentests of repositories, code archives, and signed-in sites.</p>
+</li>
+<li>
+<p>Hacktron in Slack can now review pull requests, generate fix pull requests, and, once you approve, change PR review settings, threat models, and applications, posting progress and results.</p>
+</li>
+<li>
+<p>New <strong>On a schedule</strong> automation trigger starts <a href="/docs/platform/automations/scheduled-whitebox-scans">whitebox scans</a> daily, weekly, or monthly, reusing saved scope, login instructions, and a credit limit set up in the <span data-product="whitebox">Whitebox</span> scan wizard.</p>
+<figure data-shot="" data-padded="" style="--w: 1123; --h: 842; --inset: 0"><picture data-theme-asset="light"><source type="image/avif" srcset="/shots/platform/automations/automation_schedule/light.77f081e6.1280.avif 1280w /shots/platform/automations/automation_schedule/light.77f081e6.2246.avif 2246w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/platform/automations/automation_schedule/light.77f081e6.webp" alt="A weekly schedule at 02:00 UTC on the Settings tab, with its next three runs and the whitebox scan action" width="1123" height="842" loading="lazy" decoding="async"></picture><picture data-theme-asset="dark"><source type="image/avif" srcset="/shots/platform/automations/automation_schedule/dark.86f8fd9b.1280.avif 1280w /shots/platform/automations/automation_schedule/dark.86f8fd9b.2246.avif 2246w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/platform/automations/automation_schedule/dark.86f8fd9b.webp" alt="A weekly schedule at 02:00 UTC on the Settings tab, with its next three runs and the whitebox scan action" width="1123" height="842" loading="lazy" decoding="async"></picture><figcaption>A weekly schedule at 02:00 UTC on the Settings tab, with its next three runs and the whitebox scan action</figcaption></figure>
+</li>
+<li>
+<p>Findings with an open fix PR now show a <strong>Fix in review</strong> badge, and their activity lists pull requests, commits, and Slack messages that mention the finding’s ID.</p>
+<figure data-shot="" style="--w: 968; --h: 214; --inset: 24"><picture data-theme-asset="light"><source type="image/avif" srcset="/shots/changelog/2026-11-05/finding_fix_in_review/light.a2b7fc8a.1280.avif 1280w /shots/changelog/2026-11-05/finding_fix_in_review/light.a2b7fc8a.1936.avif 1936w" sizes="(width >= 1752px) calc((822px) * 1.0522), (width >= 1024px) calc((50vw - 36px) * 1.0522), (width >= 600px) calc((100vw - 48px) * 1.0522), calc((100vw - 32px) * 1.0522)"><img src="/shots/changelog/2026-11-05/finding_fix_in_review/light.a2b7fc8a.webp" alt="A finding’s full page with the Fix in review badge in its header, linking to the open fix pull request" width="968" height="214" loading="lazy" decoding="async"></picture><picture data-theme-asset="dark"><source type="image/avif" srcset="/shots/changelog/2026-11-05/finding_fix_in_review/dark.75b6814f.1280.avif 1280w /shots/changelog/2026-11-05/finding_fix_in_review/dark.75b6814f.1936.avif 1936w" sizes="(width >= 1752px) calc((822px) * 1.0522), (width >= 1024px) calc((50vw - 36px) * 1.0522), (width >= 600px) calc((100vw - 48px) * 1.0522), calc((100vw - 32px) * 1.0522)"><img src="/shots/changelog/2026-11-05/finding_fix_in_review/dark.75b6814f.webp" alt="A finding’s full page with the Fix in review badge in its header, linking to the open fix pull request" width="968" height="214" loading="lazy" decoding="async"></picture><figcaption>A finding’s full page with the Fix in review badge in its header, linking to the open fix pull request</figcaption></figure>
+</li>
+<li>
+<p><a href="/docs/platform/context/threat-models">Threat models</a> now refresh daily at 03:00 UTC when the default branch changes, application models rebuild with their repositories, and one false-positive or accepted-risk decision triggers an update.</p>
+</li>
+<li>
+<p>Log in, sign-up, and SSO pages are redesigned, with the email form first and Google, GitHub, and SSO below it, and password reset now has its own page.</p>
+<div data-tabs=""><details name="tabs-2888" open><summary>Before</summary><figure data-shot="" style="--w: 1208; --h: 860; --inset: 0"><picture data-theme-asset="light"><source type="image/avif" srcset="/shots/changelog/2026-11-05/login_page_before/light.8f94d57c.1280.avif 1280w /shots/changelog/2026-11-05/login_page_before/light.8f94d57c.2416.avif 2416w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/changelog/2026-11-05/login_page_before/light.8f94d57c.webp" alt="The previous Log in page" width="1208" height="860" loading="lazy" decoding="async"></picture><picture data-theme-asset="dark"><source type="image/avif" srcset="/shots/changelog/2026-11-05/login_page_before/dark.b3bed30c.1280.avif 1280w /shots/changelog/2026-11-05/login_page_before/dark.b3bed30c.2416.avif 2416w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/changelog/2026-11-05/login_page_before/dark.b3bed30c.webp" alt="The previous Log in page" width="1208" height="860" loading="lazy" decoding="async"></picture><figcaption>The previous Log in page</figcaption></figure></details><details name="tabs-2888"><summary>After</summary><figure data-shot="" style="--w: 1208; --h: 860; --inset: 0"><picture data-theme-asset="light"><source type="image/avif" srcset="/shots/changelog/2026-11-05/login_page_after/light.d121bae7.1280.avif 1280w /shots/changelog/2026-11-05/login_page_after/light.d121bae7.2416.avif 2416w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/changelog/2026-11-05/login_page_after/light.d121bae7.webp" alt="The redesigned Log in page, with the email form first and Google, GitHub, and SSO options below it" width="1208" height="860" loading="lazy" decoding="async"></picture><picture data-theme-asset="dark"><source type="image/avif" srcset="/shots/changelog/2026-11-05/login_page_after/dark.7f9df2fb.1280.avif 1280w /shots/changelog/2026-11-05/login_page_after/dark.7f9df2fb.2416.avif 2416w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/changelog/2026-11-05/login_page_after/dark.7f9df2fb.webp" alt="The redesigned Log in page, with the email form first and Google, GitHub, and SSO options below it" width="1208" height="860" loading="lazy" decoding="async"></picture><figcaption>The redesigned Log in page, with the email form first and Google, GitHub, and SSO options below it</figcaption></figure></details></div>
+</li>
+</ul>
+<h3 id="api"><a href="#api" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>API</h3>
+<ul>
+<li>You can now <a href="/docs/api/pentests/create-pentest">run a pentest through the API</a> from draft to start, with <code>POST /pentests</code>, <code>PATCH /pentests/{id}</code>, <code>POST /pentests/{id}/login-checks</code>, <code>POST /pentests/{id}/estimate</code>, and <code>POST /pentests/{id}/start</code>.</li>
+<li>New <code>GET /pull-requests</code>, <code>GET /pull-requests/details</code>, and <code>POST /pull-requests/review</code> endpoints list open pull requests and start a Hacktron review without anyone commenting on them.</li>
+<li>New <code>GET /pr-review-settings</code>, <code>PATCH /pr-review-settings</code>, and <code>POST /repos/pr-reviews</code> endpoints let you <a href="/docs/api/repos/get-pr-review-settings">read and change PR review settings</a>, including <code>scm_check_statuses_enabled</code>, and turn reviews on or off per repository.</li>
+<li>New <code>POST /scans/{id}/stop</code> <a href="/docs/api/scans/stop-scan">stops a scan</a>, <code>POST /archives/uploads</code> uploads a code archive, <code>DELETE /pentests/{id}</code> discards a draft, <code>GET /credits</code> returns your credit balance, and <code>GET /findings/counts</code> returns finding counts.</li>
+<li>New <code>POST /findings/{id}/remediate</code>, <code>GET /findings/{id}/remediation</code>, and <code>GET /credits/automation</code> endpoints start a fix pull request for a finding, check its progress, and read automation credits.</li>
+<li>New endpoints read and edit context documents, sync threat models, fetch pentest reports with <code>GET /scans/{id}/report</code>, open code checkouts with <code>POST /code-workspaces</code>, and manage applications with <code>POST /applications</code>.</li>
+</ul>
+<h3 id="mcp"><a href="#mcp" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>MCP</h3>
+<ul>
+<li>New <a href="/docs/mcp">MCP tools</a> <code>create_pentest_draft</code>, <code>update_pentest_draft</code>, <code>estimate_pentest</code>, <code>start_pentest</code>, <code>stop_scan</code>, <code>discard_pentest_draft</code>, and <code>request_archive_upload</code> let you draft, price, start, stop, and discard pentests, including of code archives.</li>
+<li>New <a href="/docs/mcp"><code>verify_pentest_login</code></a> tool checks that Hacktron can sign in to each site on a pentest draft, and drafts now accept login targets for signed-in testing.</li>
+<li>The <a href="/docs/mcp">MCP server</a> now has <code>list_repositories</code>, <code>get_cost_estimation</code>, <code>get_credit_balance</code>, and <code>count_findings</code> tools, so your assistant can see your repositories, cost estimates, credit balance, and finding totals.</li>
+<li>New <code>list_pull_requests</code>, <code>get_pull_request</code>, and <code>start_pr_review</code> tools start reviews on GitHub, GitLab, Bitbucket, and Azure DevOps, and <code>get_pr_review_settings</code>, <code>update_pr_review_settings</code>, and <code>set_pr_reviews</code> change PR review settings.</li>
+<li>New <code>start_remediation</code>, <code>get_remediation</code>, and <code>get_automation_credit_balance</code> MCP tools let your AI assistant generate a fix pull request for a finding, follow it, and check automation credits.</li>
+<li>New MCP tools such as <code>list_context_documents</code>, <code>read_context_document</code>, <code>get_pentest_report</code>, <code>open_code_workspace</code>, <code>edit_context_document</code>, <code>update_threat_model</code>, and <code>create_application</code> let your agents read code and pentest reports, and edit threat models and applications.</li>
+</ul>
+<h2 id="october-27-2026"><a href="#october-27-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>October 27, 2026</h2>
+<h3 id="whitebox"><a href="#whitebox" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="whitebox">Whitebox</span></h3>
+<ul>
+<li>
+<p>New <a href="/docs/whitebox/quickstart">Scope step</a> in the wizard picks the folders a pentest covers, for GitHub, GitHub Enterprise Server, and public github.com repositories.</p>
+<figure data-shot="" data-padded="" style="--w: 795; --h: 596; --inset: 0"><picture data-theme-asset="light"><source type="image/avif" srcset="/shots/whitebox/quickstart/whitebox_scope_folders/light.c6425c26.1280.avif 1280w /shots/whitebox/quickstart/whitebox_scope_folders/light.c6425c26.1590.avif 1590w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/whitebox/quickstart/whitebox_scope_folders/light.c6425c26.webp" alt="Choose folders, where checked folders are included in the pentest" width="795" height="596" loading="lazy" decoding="async"></picture><picture data-theme-asset="dark"><source type="image/avif" srcset="/shots/whitebox/quickstart/whitebox_scope_folders/dark.d9446ecc.1280.avif 1280w /shots/whitebox/quickstart/whitebox_scope_folders/dark.d9446ecc.1590.avif 1590w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/whitebox/quickstart/whitebox_scope_folders/dark.d9446ecc.webp" alt="Choose folders, where checked folders are included in the pentest" width="795" height="596" loading="lazy" decoding="async"></picture><figcaption>Choose folders, where checked folders are included in the pentest</figcaption></figure>
+</li>
+<li>
+<p>New <a href="/docs/whitebox/attestation-letters">attestation letters</a> give each customer a letter with a shareable link that opens without signing in, and a PDF.</p>
+<figure data-shot="" data-padded="" style="--w: 1566; --h: 1174; --inset: 0"><picture data-theme-asset="light"><source type="image/avif" srcset="/shots/whitebox/attestation-letters/whitebox_attestation_public/light.8248ba45.1280.avif 1280w /shots/whitebox/attestation-letters/whitebox_attestation_public/light.8248ba45.3132.avif 3132w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/whitebox/attestation-letters/whitebox_attestation_public/light.8248ba45.webp" alt="A sample attestation letter for Acme’s Identity application, with the engagement dates, scope, methodology, retest confirmation, signature, and a verification QR code" width="1566" height="1174" loading="lazy" decoding="async"></picture><picture data-theme-asset="dark"><source type="image/avif" srcset="/shots/whitebox/attestation-letters/whitebox_attestation_public/dark.c8a16586.1280.avif 1280w /shots/whitebox/attestation-letters/whitebox_attestation_public/dark.c8a16586.3132.avif 3132w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/whitebox/attestation-letters/whitebox_attestation_public/dark.c8a16586.webp" alt="A sample attestation letter for Acme’s Identity application, with the engagement dates, scope, methodology, retest confirmation, signature, and a verification QR code" width="1566" height="1174" loading="lazy" decoding="async"></picture><figcaption>A sample attestation letter for Acme’s Identity application, with the engagement dates, scope, methodology, retest confirmation, signature, and a verification QR code</figcaption></figure>
+</li>
+<li>
+<p>The wizard’s last step is now a summary of your choices, such as <strong>Source</strong>, <strong>Scope</strong>, <strong>Target</strong>, and <strong>Context</strong>, each with <strong>Edit</strong>.</p>
+</li>
+<li>
+<p>Reports now list every deployed target and the accounts used to sign in.</p>
+</li>
+</ul>
+<h3 id="review-1"><a href="#review-1" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li>Pull requests with up to 500 changed files are now reviewed, up from 200.</li>
+<li>New <strong>Post system comments</strong> setting lets admins turn off notices about skipped reviews, usage limits, and configuration problems.</li>
+<li>Each developer now gets 50 free reviews per approved open source repository each cycle, up from 30.</li>
+<li>Auto-assignment now warns that bot authors take billable seats.</li>
+</ul>
+<h3 id="platform-2"><a href="#platform-2" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li><a href="/docs/review/people">People</a> now has separate <strong>Members</strong> and <strong>Invitations</strong> tabs.</li>
+<li>A finding’s <strong>Activity</strong> tab now has a filter and a newest or oldest sort.</li>
+<li><a href="/docs/platform/repositories/gitlab">GitLab now works with Developer access</a> when your team adds the webhook and a <code>read_repository</code> deploy token.</li>
+<li>A GitLab connection can now be saved before setup is complete.</li>
+<li>The trial activation modal can now turn on reviews for every connected repository at once.</li>
+</ul>
+<h2 id="october-21-2026"><a href="#october-21-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>October 21, 2026</h2>
+<h3 id="whitebox-1"><a href="#whitebox-1" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="whitebox">Whitebox</span></h3>
+<ul>
+<li>
+<p><a href="/docs/whitebox/retests">Retests</a> now start from <strong>Request retest</strong> on a completed scan, cover every finding except false positives and accepted risk.</p>
+<figure data-shot="" data-padded="" style="--w: 1084; --h: 813; --inset: 0"><picture data-theme-asset="light"><source type="image/avif" srcset="/shots/whitebox/retests/whitebox_retest_result/light.32892a3a.1280.avif 1280w /shots/whitebox/retests/whitebox_retest_result/light.32892a3a.2168.avif 2168w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/whitebox/retests/whitebox_retest_result/light.32892a3a.webp" alt="Retest result with a finding marked Verified fixed and the team’s verification note" width="1084" height="813" loading="lazy" decoding="async"></picture><picture data-theme-asset="dark"><source type="image/avif" srcset="/shots/whitebox/retests/whitebox_retest_result/dark.5923aec9.1280.avif 1280w /shots/whitebox/retests/whitebox_retest_result/dark.5923aec9.2168.avif 2168w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/whitebox/retests/whitebox_retest_result/dark.5923aec9.webp" alt="Retest result with a finding marked Verified fixed and the team’s verification note" width="1084" height="813" loading="lazy" decoding="async"></picture><figcaption>Retest result with a finding marked Verified fixed and the team’s verification note</figcaption></figure>
+</li>
+<li>
+<p>After a retest, <strong>Download report</strong> now offers the <strong>Original scan</strong> and <strong>After retest</strong> editions.</p>
+</li>
+<li>
+<p>With <a href="/docs/whitebox/quickstart">dynamic testing</a>, <strong>Define target</strong> now takes several apps, each with its own domain, <strong>Auth instructions</strong>, and <strong>Verify access</strong>, and <strong>Verify all</strong> checks them together.</p>
+</li>
+<li>
+<p>Organisation admins can now edit, verify, estimate, start, and stop their teammates’ pentests.</p>
+</li>
+<li>
+<p>Report <strong>Methodology</strong> now gives how many functions each area selected, and <strong>Coverage Detail</strong> lists at most 50 entry points that no pass selected.</p>
+</li>
+</ul>
+<h3 id="platform-3"><a href="#platform-3" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li>Every finding now shows an ID, such as <code>ACME-FD-12</code>, in its panel, on its full page, and in its URL, and clicking the ID copies it.</li>
+<li>A finding’s <strong>Activity</strong> tab now lists each detection and every edit with who made it, and <strong>Comments</strong> shows only the thread.</li>
+<li>With a finding open, global search now leads with actions for it, such as <strong>Change status</strong>, <strong>Change severity</strong>, <strong>Copy ID</strong>, and <strong>Copy link</strong>.</li>
+<li>Pasting two or more finding IDs into the findings search now filters to those findings, and global search now finds a finding by its ID.</li>
+<li>The CWE badge on a finding now shows the weakness’s full name on hover.</li>
+<li><a href="/docs/platform/repositories">Repositories</a> now warns when PR <span data-product="review">Review</span> is on but no trial or subscription is active, with <strong>Start free trial</strong> for owners.</li>
+<li>Onboarding now connects GitHub, GitHub Enterprise Server, GitLab, Bitbucket, or Azure DevOps, and adds a <strong>Choose your repositories</strong> step.</li>
+<li><a href="/docs/platform/on-premises">Appliances</a> that cannot reach GitHub.com now disable its setup and name the cause, such as DNS or TLS.</li>
+<li>On appliances, the GitHub.com integration now shows webhook delivery health with <strong>Send test</strong>, and its PR reviews need a public HTTPS address.</li>
+<li>Dynamic testing is now on for every appliance.</li>
+<li>Appliances in managed pentest mode now show a cost estimate and a credit balance, and triage every pentest.</li>
+</ul>
+<h3 id="api-1"><a href="#api-1" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>API</h3>
+<ul>
+<li><a href="/docs/api/findings/list-findings">List findings</a> now matches <code>repo_url</code> regardless of case, a trailing slash, or a <code>.git</code> suffix.</li>
+</ul>
+<h2 id="october-9-2026"><a href="#october-9-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>October 9, 2026</h2>
+<h3 id="whitebox-2"><a href="#whitebox-2" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="whitebox">Whitebox</span></h3>
+<ul>
+<li>
+<p>The <a href="/docs/whitebox/logs">pentest page</a> now has a collapsible <strong>Timeline</strong>, an <strong>Agents</strong> section that groups findings by agent, and a severity summary in its header.</p>
+<div data-tabs=""><details name="tabs-10403" open><summary>Before</summary><figure data-shot="" style="--w: 1400; --h: 1050; --inset: 0"><picture data-theme-asset="light"><source type="image/avif" srcset="/shots/changelog/2026-10-09/pentest_page_before/light.af0be917.1280.avif 1280w /shots/changelog/2026-10-09/pentest_page_before/light.af0be917.2800.avif 2800w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/changelog/2026-10-09/pentest_page_before/light.af0be917.webp" alt="A completed pentest’s page with every timeline step listed and the agents as coloured squares" width="1400" height="1050" loading="lazy" decoding="async"></picture><picture data-theme-asset="dark"><source type="image/avif" srcset="/shots/changelog/2026-10-09/pentest_page_before/dark.dd8c645a.1280.avif 1280w /shots/changelog/2026-10-09/pentest_page_before/dark.dd8c645a.2800.avif 2800w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/changelog/2026-10-09/pentest_page_before/dark.dd8c645a.webp" alt="A completed pentest’s page with every timeline step listed and the agents as coloured squares" width="1400" height="1050" loading="lazy" decoding="async"></picture><figcaption>A completed pentest’s page with every timeline step listed and the agents as coloured squares</figcaption></figure></details><details name="tabs-10403"><summary>After</summary><figure data-shot="" style="--w: 1400; --h: 1050; --inset: 0"><picture data-theme-asset="light"><source type="image/avif" srcset="/shots/changelog/2026-10-09/pentest_page_after/light.4439b702.1280.avif 1280w /shots/changelog/2026-10-09/pentest_page_after/light.4439b702.2800.avif 2800w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/changelog/2026-10-09/pentest_page_after/light.4439b702.webp" alt="A completed pentest’s page with the timeline collapsed and findings grouped under each agent" width="1400" height="1050" loading="lazy" decoding="async"></picture><picture data-theme-asset="dark"><source type="image/avif" srcset="/shots/changelog/2026-10-09/pentest_page_after/dark.89635308.1280.avif 1280w /shots/changelog/2026-10-09/pentest_page_after/dark.89635308.2800.avif 2800w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/changelog/2026-10-09/pentest_page_after/dark.89635308.webp" alt="A completed pentest’s page with the timeline collapsed and findings grouped under each agent" width="1400" height="1050" loading="lazy" decoding="async"></picture><figcaption>A completed pentest’s page with the timeline collapsed and findings grouped under each agent</figcaption></figure></details></div>
+</li>
+<li>
+<p><a href="/docs/whitebox/findings-and-reports">Full reports</a> now have <strong>Severity Rubric</strong>, <strong>Methodology</strong>, <strong>Coverage Detail</strong>, and <strong>Limitations and Disclaimer</strong> sections, and their scope lists deployed targets and the testing window.</p>
+<figure data-shot="" style="--w: 736; --h: 431; --inset: 24"><picture data-theme-asset="light"><source type="image/avif" srcset="/shots/whitebox/findings-and-reports/whitebox_report_contents/light.f2ab593a.1280.avif 1280w /shots/whitebox/findings-and-reports/whitebox_report_contents/light.f2ab593a.1472.avif 1472w" sizes="(width >= 1752px) calc((822px) * 1.0698), (width >= 1024px) calc((50vw - 36px) * 1.0698), (width >= 600px) calc((100vw - 48px) * 1.0698), calc((100vw - 32px) * 1.0698)"><img src="/shots/whitebox/findings-and-reports/whitebox_report_contents/light.f2ab593a.webp" alt="Contents of a sample Full Whitebox Report: executive summary, scope, findings summary, methodology, severity rubric, individual findings, and limitations" width="736" height="431" loading="lazy" decoding="async"></picture><picture data-theme-asset="dark"><source type="image/avif" srcset="/shots/whitebox/findings-and-reports/whitebox_report_contents/dark.fa8952e5.1280.avif 1280w /shots/whitebox/findings-and-reports/whitebox_report_contents/dark.fa8952e5.1472.avif 1472w" sizes="(width >= 1752px) calc((822px) * 1.0698), (width >= 1024px) calc((50vw - 36px) * 1.0698), (width >= 600px) calc((100vw - 48px) * 1.0698), calc((100vw - 32px) * 1.0698)"><img src="/shots/whitebox/findings-and-reports/whitebox_report_contents/dark.fa8952e5.webp" alt="Contents of a sample Full Whitebox Report: executive summary, scope, findings summary, methodology, severity rubric, individual findings, and limitations" width="736" height="431" loading="lazy" decoding="async"></picture><figcaption>Contents of a sample Full <span data-product="whitebox">Whitebox</span> Report: executive summary, scope, findings summary, methodology, severity rubric, individual findings, and limitations</figcaption></figure>
+</li>
+<li>
+<p>A finding with live-validation evidence now gets a <strong>Live Validation</strong> section in the report.</p>
+</li>
+</ul>
+<h3 id="platform-4"><a href="#platform-4" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li>
+<p>The <a href="/docs/platform/integrations">Integrations</a> page is now a searchable list with category tabs, and each integration opens in its own dialog.</p>
+<div data-tabs=""><details name="tabs-11474" open><summary>Before</summary><figure data-shot="" style="--w: 1400; --h: 1050; --inset: 0"><picture data-theme-asset="light"><source type="image/avif" srcset="/shots/changelog/2026-10-09/integrations_before/light.06b84c8c.1280.avif 1280w /shots/changelog/2026-10-09/integrations_before/light.06b84c8c.2800.avif 2800w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/changelog/2026-10-09/integrations_before/light.06b84c8c.webp" alt="Integrations as a grid of cards, one per provider" width="1400" height="1050" loading="lazy" decoding="async"></picture><picture data-theme-asset="dark"><source type="image/avif" srcset="/shots/changelog/2026-10-09/integrations_before/dark.59fa2762.1280.avif 1280w /shots/changelog/2026-10-09/integrations_before/dark.59fa2762.2800.avif 2800w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/changelog/2026-10-09/integrations_before/dark.59fa2762.webp" alt="Integrations as a grid of cards, one per provider" width="1400" height="1050" loading="lazy" decoding="async"></picture><figcaption>Integrations as a grid of cards, one per provider</figcaption></figure></details><details name="tabs-11474"><summary>After</summary><figure data-shot="" style="--w: 1400; --h: 1050; --inset: 0"><picture data-theme-asset="light"><source type="image/avif" srcset="/shots/changelog/2026-10-09/integrations_after/light.36257d3b.1280.avif 1280w /shots/changelog/2026-10-09/integrations_after/light.36257d3b.2800.avif 2800w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/changelog/2026-10-09/integrations_after/light.36257d3b.webp" alt="Integrations as a searchable list grouped into source code, issue tracking, and notifications" width="1400" height="1050" loading="lazy" decoding="async"></picture><picture data-theme-asset="dark"><source type="image/avif" srcset="/shots/changelog/2026-10-09/integrations_after/dark.c4a546b9.1280.avif 1280w /shots/changelog/2026-10-09/integrations_after/dark.c4a546b9.2800.avif 2800w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/changelog/2026-10-09/integrations_after/dark.c4a546b9.webp" alt="Integrations as a searchable list grouped into source code, issue tracking, and notifications" width="1400" height="1050" loading="lazy" decoding="async"></picture><figcaption>Integrations as a searchable list grouped into source code, issue tracking, and notifications</figcaption></figure></details></div>
+</li>
+<li>
+<p><a href="/docs/platform/project-management/jira">Jira</a> now syncs finding status with linked issues in both directions, as <a href="/docs/platform/project-management/linear">Linear</a> already did.</p>
+</li>
+<li>
+<p>Severity changes now update the priority of linked Jira and Linear issues.</p>
+</li>
+<li>
+<p>New <strong>Update tickets from findings</strong> and <strong>Update findings from Jira</strong> or <strong>Linear</strong> settings turn each sync direction on or off.</p>
+</li>
+<li>
+<p>Findings now have IDs such as <code>ACME-FD-12</code>, shown in Slack messages, Jira and Linear tickets, and pull request comments.</p>
+</li>
+<li>
+<p>A resolved finding that a later scan detects again now reopens, while false positives and accepted risks stay closed.</p>
+</li>
+<li>
+<p>New <strong>Help</strong> menu in the top bar links to the docs, the API reference, the MCP server, and the changelog.</p>
+</li>
+<li>
+<p>New <strong>Send feedback</strong> button in the sidebar sends a bug report or a suggestion to the Hacktron team.</p>
+</li>
+</ul>
+<h3 id="api-2"><a href="#api-2" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>API</h3>
+<ul>
+<li><a href="/docs/api/findings/get-finding">Finding endpoints</a> now accept a finding’s ID, such as <code>ACME-FD-12</code>, in place of its UUID, and return it as <code>display_id</code>.</li>
+</ul>
+<h3 id="mcp-1"><a href="#mcp-1" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>MCP</h3>
+<ul>
+<li><a href="/docs/mcp">Finding tools</a> now accept a finding’s ID, such as <code>ACME-FD-12</code>, in place of its UUID.</li>
+</ul>
+<h2 id="september-25-2026"><a href="#september-25-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>September 25, 2026</h2>
+<h3 id="review-2"><a href="#review-2" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li><a href="/docs/review/setup"><code>@hacktronai review</code></a> on a commit that was already reviewed now replies with the result, or says the review is still running.</li>
+<li>A review you request with <code>@hacktronai review</code> now replies when it finds nothing.</li>
+<li>Scans with no findings no longer post a summary comment on GitLab, Bitbucket, or Azure DevOps pull requests.</li>
+</ul>
+<h3 id="platform-5"><a href="#platform-5" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li><a href="/docs/platform/repositories">Repositories</a> now shows <strong>Repository</strong>, <strong>Owner</strong>, <strong>Findings</strong>, <strong>PR Scans</strong>, and <strong>Last Scan</strong>, and repository access moves from its <strong>Enabled</strong> switch to each Git integration.</li>
+<li><a href="/docs/platform/repositories/github">GitHub</a> repositories added back to the GitHub App are now selected again automatically.</li>
+<li><a href="/docs/platform/on-premises">Appliances</a> can now review GitHub.com pull requests through a customer-owned GitHub App.</li>
+</ul>
+<h3 id="api-3"><a href="#api-3" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>API</h3>
+<ul>
+<li><a href="/docs/api/repos/list-repos">List repositories</a> now returns <code>openFindingsCount</code> and <code>lastScanAt</code> for each repository.</li>
+</ul>
+<h2 id="september-22-2026"><a href="#september-22-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>September 22, 2026</h2>
+<h3 id="whitebox-3"><a href="#whitebox-3" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="whitebox">Whitebox</span></h3>
+<ul>
+<li>New <a href="/docs/whitebox/retests">retests</a> send the findings you fixed and your fix details to the Hacktron team from <strong>Retest findings</strong>, and the PDF report shows each finding’s outcome.</li>
+<li>New <strong>Verify access</strong> in the wizard tests your audit instructions and login credentials in a browser, with a <strong>Live access preview</strong>, before the pentest starts.</li>
+<li>New <strong>View validation activity</strong> on the pentest page streams what each validation agent does.</li>
+</ul>
+<h3 id="platform-6"><a href="#platform-6" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li><a href="/docs/review/people">People</a> search, filters, and sorting now cover every member, not only the first 100, and search also matches email and SCM usernames.</li>
+<li>Creating an organisation from the organisation menu now opens onboarding.</li>
+<li>Code in findings and reports now highlights Dart, Haskell, Erlang, and other languages the scan engine reads.</li>
+</ul>
+<h3 id="api-4"><a href="#api-4" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>API</h3>
+<ul>
+<li><a href="/docs/api/scans/create-scan">Create scan</a> now treats a repository without <code>source</code> as <code>connected</code>.</li>
+</ul>
+<h2 id="september-18-2026"><a href="#september-18-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>September 18, 2026</h2>
+<h3 id="whitebox-4"><a href="#whitebox-4" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="whitebox">Whitebox</span></h3>
+<ul>
+<li>Pentests of GitLab repositories can now target a tag or a commit, not only a branch.</li>
+<li>PDF reports now number findings in display order, highlight code in the right language, and render Chinese, Japanese, and Korean text.</li>
+<li>Reports that state every finding was confirmed by hand now leave out findings marked false positive.</li>
+</ul>
+<h3 id="review-3"><a href="#review-3" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li>Bot pull requests on GitHub, such as Dependabot and Renovate, are now reviewed when opened from a branch in the same repository, and take a <a href="/docs/review/people">seat</a>.</li>
+<li>When a later commit fixes a finding, Hacktron now replies and resolves its thread on GitLab, Bitbucket, and Azure DevOps, as on GitHub.</li>
+<li>New pushes to a pull request on GitLab, Bitbucket, or Azure DevOps are now reviewed from the last reviewed commit, as on GitHub.</li>
+</ul>
+<h3 id="platform-7"><a href="#platform-7" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li>Findings now show a CWE ID and a fix recommendation when the scan engine provides them.</li>
+<li>A finding’s OWASP Top 10:2025 category can now be set or cleared from its menu.</li>
+<li>Global search now shows finding severity, finds people, and has <strong>Quick actions</strong> such as <strong>Run <span data-product="whitebox">Whitebox</span> Scan</strong> and <strong><span data-product="review">Review</span> Highest-Priority Finding</strong>.</li>
+<li>The <strong>Application</strong> filter on the <strong>PR <span data-product="review">Review</span></strong> tab of the <a href="/docs/platform/dashboard">dashboard</a> now filters every widget, including the security score.</li>
+<li>A failed scan’s page now shows why it failed.</li>
+<li><a href="/docs/platform/context/applications">Application</a> pages now open each repository’s threat model in a side panel.</li>
+<li>Repositories renamed or moved on GitHub, GitLab, Bitbucket, or Azure DevOps now update in Hacktron.</li>
+<li>The <a href="/docs/platform/repositories/gitlab">GitLab</a> integration now shows <strong>Token expired</strong> or <strong>Token expiring</strong>.</li>
+<li>Open fix pull requests from <a href="/docs/platform/automations/remediation">Remediation</a> now close with a comment when the finding’s fix lands on the base branch another way.</li>
+<li><a href="/docs/platform/on-premises">Appliances</a> now show their licence in organisation settings and warn 30 days before it expires.</li>
+<li>Appliances can now connect self-managed GitLab and review merge requests.</li>
+<li>Appliances can now edit a finding’s title, description, severity, code, and proof of concept with <strong>Edit finding</strong>.</li>
+</ul>
+<h2 id="august-19-2026"><a href="#august-19-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>August 19, 2026</h2>
+<h3 id="review-4"><a href="#review-4" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li>New <strong>Post comments to source control</strong> setting in <a href="/docs/platform/organization-settings#post-comments-to-source-control">organisation settings</a> keeps finding details in Hacktron while checks still update.</li>
+<li><code>@hacktronai review</code> now uses the pull request author’s seat when the author is in your organisation, and the commenter’s only for outside contributors.</li>
+</ul>
+<h3 id="platform-8"><a href="#platform-8" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li>
+<p>The findings list and finding drawer are redesigned, with a <strong>Category</strong> column, status you can change in each row, and previous and next arrows in the drawer.</p>
+<div data-tabs=""><details name="tabs-17609" open><summary>Before</summary><figure data-shot="" style="--w: 1400; --h: 1050; --inset: 0"><picture data-theme-asset="light"><source type="image/avif" srcset="/shots/changelog/2026-08-19/findings_drawer_before/light.d2a63e20.1280.avif 1280w /shots/changelog/2026-08-19/findings_drawer_before/light.d2a63e20.2800.avif 2800w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/changelog/2026-08-19/findings_drawer_before/light.d2a63e20.webp" alt="A finding open in the drawer, with severity, file, and repository in a grid above the tabs" width="1400" height="1050" loading="lazy" decoding="async"></picture><picture data-theme-asset="dark"><source type="image/avif" srcset="/shots/changelog/2026-08-19/findings_drawer_before/dark.12db8594.1280.avif 1280w /shots/changelog/2026-08-19/findings_drawer_before/dark.12db8594.2800.avif 2800w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/changelog/2026-08-19/findings_drawer_before/dark.12db8594.webp" alt="A finding open in the drawer, with severity, file, and repository in a grid above the tabs" width="1400" height="1050" loading="lazy" decoding="async"></picture><figcaption>A finding open in the drawer, with severity, file, and repository in a grid above the tabs</figcaption></figure></details><details name="tabs-17609"><summary>After</summary><figure data-shot="" style="--w: 1400; --h: 1050; --inset: 0"><picture data-theme-asset="light"><source type="image/avif" srcset="/shots/changelog/2026-08-19/findings_drawer_after/light.54153b22.1280.avif 1280w /shots/changelog/2026-08-19/findings_drawer_after/light.54153b22.2800.avif 2800w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/changelog/2026-08-19/findings_drawer_after/light.54153b22.webp" alt="A finding open in the drawer, with severity and status in a header tray and previous and next arrows" width="1400" height="1050" loading="lazy" decoding="async"></picture><picture data-theme-asset="dark"><source type="image/avif" srcset="/shots/changelog/2026-08-19/findings_drawer_after/dark.70713f42.1280.avif 1280w /shots/changelog/2026-08-19/findings_drawer_after/dark.70713f42.2800.avif 2800w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/changelog/2026-08-19/findings_drawer_after/dark.70713f42.webp" alt="A finding open in the drawer, with severity and status in a header tray and previous and next arrows" width="1400" height="1050" loading="lazy" decoding="async"></picture><figcaption>A finding open in the drawer, with severity and status in a header tray and previous and next arrows</figcaption></figure></details></div>
+</li>
+<li>
+<p><a href="/docs/platform/billing">Billing</a> now shows <strong><span data-product="whitebox">Whitebox</span> Scan Credits</strong> and <strong>Automation credits</strong> as separate accounts, each with its balance and use this period.</p>
+</li>
+<li>
+<p>Billing history now has <strong>Product</strong> and <strong>Type</strong> columns and lists credit purchases.</p>
+</li>
+<li>
+<p>Triage status now updates the linked <a href="/docs/platform/project-management/linear">Linear</a> issue, and starting a fix moves it to <strong>In Progress</strong>.</p>
+</li>
+<li>
+<p>Azure DevOps pull request authors now appear in <a href="/docs/review/people">People</a> and can hold <span data-product="review">Review</span> seats, and triage replies and <strong>Fix with AI</strong> links now work on Azure DevOps.</p>
+</li>
+<li>
+<p>Members can now <a href="/docs/platform/account-settings#connect-microsoft-for-azure-devops">connect a Microsoft account</a> so the Azure DevOps pull requests they open are attributed to them.</p>
+</li>
+<li>
+<p>An Azure DevOps connection can now store the token’s expiry date, and Integrations warns before the token expires.</p>
+</li>
+<li>
+<p><strong>Account</strong> and <strong>Settings</strong> are now one <a href="/docs/platform/account-settings">Personal settings</a> page.</p>
+</li>
+<li>
+<p>Every member can now create, rename, rotate, and revoke their own API keys in <strong>Org settings</strong>.</p>
+</li>
+<li>
+<p><a href="/docs/platform/automations/remediation">Remediation</a> now opens fix pull requests on Azure DevOps.</p>
+</li>
+<li>
+<p>Merging a fix pull request into its target branch now resolves the finding and unblocks the check.</p>
+</li>
+<li>
+<p>A fix that no longer applies because the base branch changed now retries on its own, up to three times.</p>
+</li>
+<li>
+<p>Deleting an automation now asks for confirmation, and enabling an incomplete one says what is missing.</p>
+</li>
+<li>
+<p>Selecting findings now exports only the selected rows.</p>
+</li>
+<li>
+<p>An application’s <a href="/docs/platform/context/threat-models">threat model</a> now says when its repositories changed and asks you to regenerate it.</p>
+</li>
+<li>
+<p>Appliances can now reach an <a href="/docs/platform/on-premises#allow-an-internal-git-host">internal Git host</a> that the operator allows, with its CA certificate.</p>
+</li>
+<li>
+<p>On-premises <span data-product="whitebox">Whitebox</span> pentests can now use enabled GitHub Enterprise Server repositories or uploaded <code>.zip</code>, <code>.7z</code>, <code>.tar.gz</code>, and <code>.tgz</code> archives up to 2 GiB.</p>
+</li>
+<li>
+<p>Appliances can now connect GitHub Enterprise Server through a GitHub App as well as a personal access token.</p>
+</li>
+</ul>
+<h2 id="august-3-2026"><a href="#august-3-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>August 3, 2026</h2>
+<h3 id="whitebox-5"><a href="#whitebox-5" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="whitebox">Whitebox</span></h3>
+<ul>
+<li>Pasting a repository URL from your browser now fills in its branch, tag, or commit, and the wizard warns when it can’t access the repository.</li>
+<li>A pentest in expert triage now shows <strong>Validating findings before final results</strong> until triage finishes.</li>
+</ul>
+<h3 id="review-5"><a href="#review-5" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li>Replying <code>!fp</code>, <code>!accepted_risk</code>, or <code>!fixed</code> to a finding now resolves its <a href="/docs/review/findings-feedback#triage-comments">review thread</a> on GitHub and GitLab.</li>
+<li>Author filters now accept <a href="/docs/review/config#glob-pattern-syntax">glob patterns</a> in <code>.hacktron/config.yaml</code> and in organisation <strong>Filters</strong>.</li>
+<li>GitLab merge requests and Bitbucket pull requests opened by bots are now reviewed and take a seat, unless <code>exclude.authors</code> lists the bot.</li>
+<li>GitLab and Bitbucket reviews now count toward your organisation’s <a href="/docs/review/usage#pooled-review-limit">review pool</a>, as GitHub reviews do.</li>
+<li>Bitbucket now supports <code>@hacktronai review</code>, and declining a pull request closes its findings.</li>
+</ul>
+<h3 id="platform-9"><a href="#platform-9" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li>
+<p>New <a href="/docs/platform/repositories/azure-devops">Azure DevOps</a> integration connects Azure DevOps Services or Server with an organisation URL and a personal access token, for <span data-product="review">Review</span> and <span data-product="whitebox">Whitebox</span>.</p>
+<figure data-shot="" data-padded="" style="--w: 848; --h: 636; --inset: 0"><picture data-theme-asset="light"><source type="image/avif" srcset="/shots/platform/repositories/azure-devops/azure_connect/light.6bf990d0.1280.avif 1280w /shots/platform/repositories/azure-devops/azure_connect/light.6bf990d0.1696.avif 1696w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/platform/repositories/azure-devops/azure_connect/light.6bf990d0.webp" alt="Connect Azure DevOps in Hacktron, with the organisation URL and token" width="848" height="636" loading="lazy" decoding="async"></picture><picture data-theme-asset="dark"><source type="image/avif" srcset="/shots/platform/repositories/azure-devops/azure_connect/dark.4f49299f.1280.avif 1280w /shots/platform/repositories/azure-devops/azure_connect/dark.4f49299f.1696.avif 1696w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/platform/repositories/azure-devops/azure_connect/dark.4f49299f.webp" alt="Connect Azure DevOps in Hacktron, with the organisation URL and token" width="848" height="636" loading="lazy" decoding="async"></picture><figcaption>Connect Azure DevOps in Hacktron, with the organisation URL and token</figcaption></figure>
+</li>
+<li>
+<p>New bulk triage changes the status or severity of the findings you select, or of every finding that matches your filters.</p>
+</li>
+<li>
+<p>Findings now show their category, and the findings list has a <strong>Category</strong> filter.</p>
+</li>
+<li>
+<p>The findings list now hides resolved findings by default.</p>
+</li>
+<li>
+<p><a href="/docs/review/usage">Usage</a> now has separate <strong>PR Reviews</strong>, <strong>Automations</strong>, and <strong><span data-product="whitebox">Whitebox</span> Scans</strong> tabs.</p>
+</li>
+<li>
+<p>Automations now stop a run at the environment’s credit cap, and an admin can raise the cap and start a new run.</p>
+</li>
+<li>
+<p>An Automations run now shows the agent’s transcript live.</p>
+</li>
+<li>
+<p>Runs started with <strong>Remediate</strong> now appear in the Automations run history.</p>
+</li>
+<li>
+<p>A fix pull request onto a developer’s branch now requests that branch’s author as a reviewer.</p>
+</li>
+<li>
+<p>Organisations now get a one-time grant of 5,000 <a href="/docs/platform/automations/credits">Automation credits</a> when they first pay for a subscription.</p>
+</li>
+</ul>
+<h2 id="july-15-2026"><a href="#july-15-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>July 15, 2026</h2>
+<h3 id="whitebox-6"><a href="#whitebox-6" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="whitebox">Whitebox</span></h3>
+<ul>
+<li>New <strong>Add expert human triage</strong> at checkout has the Hacktron security team review every finding before you see it, for extra credits.</li>
+<li>The <strong>Cost calculation</strong> step now has a <strong>Model</strong> choice of <strong>Default</strong> or <strong>Legacy</strong>.</li>
+<li><span data-product="whitebox">Whitebox</span> pentests can now use connected Bitbucket repositories.</li>
+</ul>
+<h3 id="review-6"><a href="#review-6" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li>New <code>!fixed</code> <a href="/docs/review/findings-feedback#triage-comments">triage reply</a> marks a finding resolved from a pull request comment or a Slack thread.</li>
+<li><a href="/docs/review/config">Repository configuration</a> now has <code>include</code> filters for labels, authors, branches, and title keywords, and <code>exclude</code> filters for authors and branches.</li>
+<li>The <code>skip</code> block in <code>.hacktron/config.yaml</code> is now <code>exclude</code>, and a <code>skip</code> block is ignored.</li>
+<li>New <strong>Filters</strong> in <a href="/docs/platform/organization-settings#scan-filters">organisation settings</a> set default label, author, branch, and keyword filters, and a repository’s config overrides each category it sets.</li>
+<li>Repositories no longer has a <strong>PR Scan Branches</strong> column, and branch filters now go in <strong>Filters</strong> or <code>.hacktron/config.yaml</code>.</li>
+<li>The pull request check now fails on blocking findings from earlier scans of the same pull request, not only the latest.</li>
+<li>On public GitHub repositories, a finding in a changed file with no changed line now posts as a file-level comment instead of in the redacted summary.</li>
+</ul>
+<h3 id="platform-10"><a href="#platform-10" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li>
+<p>New <a href="/docs/platform/repositories/bitbucket">Bitbucket</a> integration connects your workspaces, and <span data-product="review">Review</span> scans their pull requests automatically.</p>
+<figure data-shot="" data-padded="" style="--w: 1086; --h: 814; --inset: 0"><picture data-theme-asset="light"><source type="image/avif" srcset="/shots/platform/repositories/bitbucket/bitbucket_select_repositories/light.9ec116bd.1280.avif 1280w /shots/platform/repositories/bitbucket/bitbucket_select_repositories/light.9ec116bd.2172.avif 2172w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/platform/repositories/bitbucket/bitbucket_select_repositories/light.9ec116bd.webp" alt="Select Bitbucket repositories in Hacktron" width="1086" height="814" loading="lazy" decoding="async"></picture><picture data-theme-asset="dark"><source type="image/avif" srcset="/shots/platform/repositories/bitbucket/bitbucket_select_repositories/dark.eb2567f9.1280.avif 1280w /shots/platform/repositories/bitbucket/bitbucket_select_repositories/dark.eb2567f9.2172.avif 2172w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/platform/repositories/bitbucket/bitbucket_select_repositories/dark.eb2567f9.webp" alt="Select Bitbucket repositories in Hacktron" width="1086" height="814" loading="lazy" decoding="async"></picture><figcaption>Select Bitbucket repositories in Hacktron</figcaption></figure>
+</li>
+<li>
+<p>New <a href="/docs/platform/automations">Automations</a> run Remediation on new findings that match a severity or repository rule, on the branches you pick, and notify Slack or email.</p>
+<figure data-shot="" style="--w: 968; --h: 716; --inset: 24"><picture data-theme-asset="light"><source type="image/avif" srcset="/shots/platform/automations/automation_settings/light.b4efacef.1280.avif 1280w /shots/platform/automations/automation_settings/light.b4efacef.1936.avif 1936w" sizes="(width >= 1752px) calc((822px) * 1.0522), (width >= 1024px) calc((50vw - 36px) * 1.0522), (width >= 600px) calc((100vw - 48px) * 1.0522), calc((100vw - 32px) * 1.0522)"><img src="/shots/platform/automations/automation_settings/light.b4efacef.webp" alt="The Settings tab with a trigger for Critical and High findings, an action, and a Slack notifier" width="968" height="716" loading="lazy" decoding="async"></picture><picture data-theme-asset="dark"><source type="image/avif" srcset="/shots/platform/automations/automation_settings/dark.72eef4e7.1280.avif 1280w /shots/platform/automations/automation_settings/dark.72eef4e7.1936.avif 1936w" sizes="(width >= 1752px) calc((822px) * 1.0522), (width >= 1024px) calc((50vw - 36px) * 1.0522), (width >= 600px) calc((100vw - 48px) * 1.0522), calc((100vw - 32px) * 1.0522)"><img src="/shots/platform/automations/automation_settings/dark.72eef4e7.webp" alt="The Settings tab with a trigger for Critical and High findings, an action, and a Slack notifier" width="968" height="716" loading="lazy" decoding="async"></picture><figcaption>The Settings tab with a trigger for Critical and High findings, an action, and a Slack notifier</figcaption></figure>
+</li>
+<li>
+<p>New <strong>Remediate</strong> on a finding has <a href="/docs/platform/automations/remediation">Remediation</a> open a fix pull request.</p>
+</li>
+<li>
+<p>Findings now <a href="/docs/whitebox/findings-and-reports#export-findings">export</a> as CSV, SARIF, or JSON from <strong>Export</strong> on the findings list, with your current filters applied.</p>
+</li>
+<li>
+<p>Taint findings now open in an annotated code reader that steps from source to sink.</p>
+</li>
+<li>
+<p>The findings list now opens newest first, with false positives and closed findings hidden.</p>
+</li>
+<li>
+<p><a href="/docs/platform/communication-apps/slack">Slack</a> finding messages now have <strong>Mark Resolved</strong> in their menu.</p>
+</li>
+<li>
+<p>New <a href="/docs/platform/automations/credits">Automation credits</a> on <strong>Billing</strong> pay for Automations runs, with auto top-up.</p>
+</li>
+</ul>
+<h3 id="api-5"><a href="#api-5" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>API</h3>
+<ul>
+<li>New <a href="/docs/api/findings/export-findings"><code>GET /findings/export</code></a> exports findings as CSV, JSON, or SARIF and takes the same filters as <code>GET /findings</code>, including <code>repo_url</code>.</li>
+</ul>
+<h2 id="june-23-2026"><a href="#june-23-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>June 23, 2026</h2>
+<h3 id="review-7"><a href="#review-7" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li>On public repositories, <span data-product="review">Review</span> now leaves out the title, description, proof of concept, and location of <a href="/docs/review/findings-feedback">findings outside the diff</a> and links to each one in Hacktron instead.</li>
+<li>GitHub pull request reviews now say when Hacktron has built or refreshed the repository’s threat model.</li>
+</ul>
+<h3 id="platform-11"><a href="#platform-11" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li>
+<p>New <a href="/docs/platform/context">Context</a> page lists your repositories and applications with their threat models and documents, which <span data-product="review">Review</span> and <span data-product="whitebox">Whitebox</span> use as context.</p>
+</li>
+<li>
+<p>New <a href="/docs/platform/context/threat-models">threat models</a> for each repository are built from reviews, triage, and your documents, and keep your edits when they regenerate.</p>
+<figure data-shot="" data-padded="" style="--w: 991; --h: 743; --inset: 0"><picture data-theme-asset="light"><source type="image/avif" srcset="/shots/platform/context/threat-models/threat_model_edit/light.73a64779.1280.avif 1280w /shots/platform/context/threat-models/threat_model_edit/light.73a64779.1982.avif 1982w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/platform/context/threat-models/threat_model_edit/light.73a64779.webp" alt="A threat model open for editing, with Cancel and Save" width="991" height="743" loading="lazy" decoding="async"></picture><picture data-theme-asset="dark"><source type="image/avif" srcset="/shots/platform/context/threat-models/threat_model_edit/dark.f4f221e9.1280.avif 1280w /shots/platform/context/threat-models/threat_model_edit/dark.f4f221e9.1982.avif 1982w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/platform/context/threat-models/threat_model_edit/dark.f4f221e9.webp" alt="A threat model open for editing, with Cancel and Save" width="991" height="743" loading="lazy" decoding="async"></picture><figcaption>A threat model open for editing, with Cancel and Save</figcaption></figure>
+</li>
+<li>
+<p>New <a href="/docs/platform/context/applications">applications</a> group repositories under one merged threat model, and a pentest can target an application.</p>
+<figure data-shot="" style="--w: 514; --h: 338; --inset: 1"><picture data-theme-asset="light"><source type="image/avif" srcset="/shots/platform/context/applications/new_application/light.1e4b56d6.1028.avif 1028w" sizes="(width >= 1752px) calc((822px) * 1.0039), (width >= 1024px) calc((50vw - 36px) * 1.0039), (width >= 600px) calc((100vw - 48px) * 1.0039), calc((100vw - 32px) * 1.0039)"><img src="/shots/platform/context/applications/new_application/light.1e4b56d6.webp" alt="The New application dialog, with a name and the repositories to include" width="514" height="338" loading="lazy" decoding="async"></picture><picture data-theme-asset="dark"><source type="image/avif" srcset="/shots/platform/context/applications/new_application/dark.5c87acaa.1028.avif 1028w" sizes="(width >= 1752px) calc((822px) * 1.0039), (width >= 1024px) calc((50vw - 36px) * 1.0039), (width >= 600px) calc((100vw - 48px) * 1.0039), calc((100vw - 32px) * 1.0039)"><img src="/shots/platform/context/applications/new_application/dark.5c87acaa.webp" alt="The New application dialog, with a name and the repositories to include" width="514" height="338" loading="lazy" decoding="async"></picture><figcaption>The New application dialog, with a name and the repositories to include</figcaption></figure>
+</li>
+<li>
+<p>Context documents now accept <code>.txt</code> files and PDFs of up to 50 pages, and <strong>Add Context</strong> adds them to repositories or applications.</p>
+</li>
+<li>
+<p>New <a href="/docs/platform/security-settings"><strong>Single sign-on (SSO)</strong></a> button on the sign-in page signs you in through your organisation’s SAML or OIDC identity provider.</p>
+</li>
+<li>
+<p>Findings can now be filtered by <strong>Application</strong>.</p>
+</li>
+<li>
+<p>A finding’s detail panel now links to its pull request.</p>
+</li>
+</ul>
+<h3 id="api-6"><a href="#api-6" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>API</h3>
+<ul>
+<li>New <a href="/docs/api/hfw/get-package-verdict">dependency firewall endpoints</a> check packages against Hacktron’s known-malware feed, one at a time or in a batch, with no API key.</li>
+</ul>
+<h2 id="june-18-2026"><a href="#june-18-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>June 18, 2026</h2>
+<h3 id="whitebox-7"><a href="#whitebox-7" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="whitebox">Whitebox</span></h3>
+<ul>
+<li>A pentest of an uploaded archive is now named after the archive.</li>
+</ul>
+<h3 id="review-8"><a href="#review-8" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li>A check that <code>fail_on.severity</code> failed now <a href="/docs/review/findings-feedback">turns back to passing</a> on GitHub and GitLab once you mark its blocking findings as false positives or accepted risks, and fails again if you reopen one.</li>
+</ul>
+<h3 id="platform-12"><a href="#platform-12" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li>
+<p>New <strong>Mark as duplicate</strong> closes a finding as a <a href="/docs/review/findings-feedback">duplicate</a> of another in the same repository, and unmarking reopens it.</p>
+</li>
+<li>
+<p>The <a href="/docs/platform/dashboard">dashboard</a> scan volume chart is now <strong>Scan volume across time</strong>, with stacked daily bars and <span data-product="review">Review</span> and <span data-product="whitebox">Whitebox</span> counts on hover.</p>
+</li>
+</ul>
+<h3 id="api-7"><a href="#api-7" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>API</h3>
+<ul>
+<li><a href="/docs/api/findings/update-finding"><code>PATCH /findings/{id}</code></a> now accepts <code>duplicate_of</code> to mark or unmark a duplicate.</li>
+</ul>
+<h3 id="mcp-2"><a href="#mcp-2" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>MCP</h3>
+<ul>
+<li>The <a href="/docs/mcp"><code>update_finding</code></a> tool now accepts <code>duplicate_of</code> to mark or unmark a duplicate.</li>
+</ul>
+<h2 id="june-15-2026"><a href="#june-15-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>June 15, 2026</h2>
+<h3 id="review-9"><a href="#review-9" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li><a href="/docs/review/config"><code>.hacktron/config.yaml</code></a> can now skip a review when every changed file matches <code>skip.paths</code>, or when the title or labels match <code>skip.keywords</code> or <code>skip.labels</code>.</li>
+<li>New <a href="/docs/review/config"><code>fail_on.severity</code></a> setting in <code>.hacktron/config.yaml</code> fails the GitHub check or GitLab commit status when a finding is at or above that severity.</li>
+</ul>
+<h3 id="platform-13"><a href="#platform-13" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li>
+<p>New <a href="/docs/platform/account-settings">multi-factor authentication</a> protects your account with an authenticator app and backup codes.</p>
+</li>
+<li>
+<p>New <a href="/docs/platform/security-settings"><strong>Require MFA for members</strong></a> setting makes every member of the organisation set up MFA.</p>
+</li>
+<li>
+<p>The findings <strong>Scan</strong> filter now takes several scans, and the <strong>Repository</strong> and <strong>Scan</strong> filters narrow each other.</p>
+</li>
+</ul>
+<h3 id="mcp-3"><a href="#mcp-3" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>MCP</h3>
+<ul>
+<li>New <a href="/docs/mcp">MCP server</a> lets AI assistants list, read, and triage your scans and findings, signing in with OAuth or an API key.</li>
+</ul>
+<h2 id="june-11-2026"><a href="#june-11-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>June 11, 2026</h2>
+<h3 id="review-10"><a href="#review-10" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li>Connecting a <a href="/docs/platform/repositories/gitlab">GitLab</a> project now turns on merge request reviews, as connecting a GitHub repository does.</li>
+<li>The <span data-product="review">Review</span> trial and onboarding now treat a connected GitLab account the same as GitHub.</li>
+</ul>
+<h2 id="june-10-2026"><a href="#june-10-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>June 10, 2026</h2>
+<h3 id="whitebox-8"><a href="#whitebox-8" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="whitebox">Whitebox</span></h3>
+<ul>
+<li>The cost estimate now names the languages in a repository that Hacktron does not support yet, instead of failing without a reason.</li>
+</ul>
+<h3 id="review-11"><a href="#review-11" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li><a href="/docs/review/billing">Free trials</a> no longer need a credit card.</li>
+<li>Findings on a pull or merge request closed without merging now move to <strong>Closed</strong>, and return when it reopens, with any triage kept.</li>
+</ul>
+<h3 id="platform-14"><a href="#platform-14" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li><a href="/docs/platform/communication-apps/slack">Slack</a> finding cards now have a <strong>Fix with AI</strong> button that shows the fix prompt and opens it in Cursor or Claude.</li>
+<li>The <strong>Connect GitLab</strong> dialog now walks through <a href="/docs/platform/repositories/gitlab">GitLab’s group service account setup</a> step by step.</li>
+</ul>
+<h2 id="june-7-2026"><a href="#june-7-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>June 7, 2026</h2>
+<h3 id="whitebox-9"><a href="#whitebox-9" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="whitebox">Whitebox</span></h3>
+<ul>
+<li>A <a href="/docs/whitebox/quickstart">pentest</a> can now target a tag or commit instead of a branch, for connected GitHub repositories and public URLs.</li>
+</ul>
+<h3 id="review-12"><a href="#review-12" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li><a href="/docs/review/findings-feedback">GitLab merge request comments</a> now match GitHub, with severity badges, a collapsible proof of concept, trace diagrams, and a <strong>Fix with AI</strong> block.</li>
+<li>Replying <code>!fp</code>, <code>!valid</code>, or <code>!accepted_risk</code> to a merge request comment now triages the finding, as on GitHub.</li>
+<li><a href="/docs/review/setup"><code>@hacktronai review</code></a> now starts a review on GitLab merge requests, and replaces <code>@hacktron review</code> on GitHub.</li>
+</ul>
+<h3 id="platform-15"><a href="#platform-15" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li>
+<p><a href="/docs/platform/repositories/github-enterprise-server">GitHub Enterprise Server</a> now connects through a GitHub App registered on your server, so <span data-product="review">Review</span> works there as well as <span data-product="whitebox">Whitebox</span>.</p>
+</li>
+<li>
+<p>Triage from the web app or Slack now appears in the finding’s pull request or merge request thread.</p>
+</li>
+<li>
+<p><a href="/docs/platform/project-management/jira">Jira</a> ticket creation now searches large projects and assignee lists, and new issues link back to the finding.</p>
+</li>
+</ul>
+<h2 id="june-3-2026"><a href="#june-3-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>June 3, 2026</h2>
+<h3 id="review-13"><a href="#review-13" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li>
+<p><a href="/docs/review/usage"><span data-product="review">Review</span> limits</a> are now pooled across the organisation, 50 reviews for each active developer seat, instead of 50 per seat.</p>
+</li>
+<li>
+<p>New <a href="/docs/review/usage"><strong>Usage</strong></a> page shows owners the organisation’s review pool, each developer’s reviews, spillover reviews, and the estimated cost.</p>
+<figure data-shot="" style="--w: 611; --h: 458; --inset: 16"><picture data-theme-asset="light"><source type="image/avif" srcset="/shots/review/usage/overage_billing_usage/light.019e9632.1222.avif 1222w" sizes="(width >= 1752px) calc((822px) * 1.0553), (width >= 1024px) calc((50vw - 36px) * 1.0553), (width >= 600px) calc((100vw - 48px) * 1.0553), calc((100vw - 32px) * 1.0553)"><img src="/shots/review/usage/overage_billing_usage/light.019e9632.webp" alt="The Usage page, with the Organization review pool above the Overage billing card" width="611" height="458" loading="lazy" decoding="async"></picture><picture data-theme-asset="dark"><source type="image/avif" srcset="/shots/review/usage/overage_billing_usage/dark.d5651152.1222.avif 1222w" sizes="(width >= 1752px) calc((822px) * 1.0553), (width >= 1024px) calc((50vw - 36px) * 1.0553), (width >= 600px) calc((100vw - 48px) * 1.0553), calc((100vw - 32px) * 1.0553)"><img src="/shots/review/usage/overage_billing_usage/dark.d5651152.webp" alt="The Usage page, with the Organization review pool above the Overage billing card" width="611" height="458" loading="lazy" decoding="async"></picture><figcaption>The Usage page, with the Organization review pool above the Overage billing card</figcaption></figure>
+</li>
+<li>
+<p><strong>Spillover billing</strong> has moved from Billing to the Usage page.</p>
+</li>
+<li>
+<p>Approved open source repositories now get 50 reviews per developer for each repository each billing period, up from 30.</p>
+</li>
+</ul>
+<h3 id="platform-16"><a href="#platform-16" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li><a href="/docs/platform/repositories/github">Connecting GitHub</a> without admin rights in the GitHub organisation now sends an installation request, and the integration appears once an admin approves it.</li>
+<li><a href="/docs/platform/project-management/jira">Jira</a> setup now starts with <strong>Automatically create tickets</strong> turned on.</li>
+<li>The <a href="/docs/platform">shared Slack channel</a> with the Hacktron team is now offered to every owner with a work email, without a trial or subscription.</li>
+</ul>
+<h2 id="june-1-2026"><a href="#june-1-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>June 1, 2026</h2>
+<h3 id="whitebox-10"><a href="#whitebox-10" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="whitebox">Whitebox</span></h3>
+<ul>
+<li>Pentests are now called <strong><span data-product="whitebox">Whitebox</span> Scans</strong> in the app, PDF reports, and emails.</li>
+</ul>
+<h3 id="review-14"><a href="#review-14" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li>Anyone with write access can now comment <a href="/docs/review/integrations/github-gitlab"><code>@hacktron review</code></a> to review a pull request on demand, including drafts and external contributors’ pull requests, on the commenter’s seat.</li>
+<li>GitHub pull request comments now show severity badges instead of emoji.</li>
+<li>The <strong>Fix with AI</strong> prompt in pull request comments now asks for a reproduction, a root-cause fix, and a regression test.</li>
+</ul>
+<h3 id="platform-17"><a href="#platform-17" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li>The sidebar now has collapsible <strong>Configuration</strong> and <strong>Management</strong> sections that stay as you left them, and account actions are in its header.</li>
+<li>The full-page finding view now has the panel’s status and severity controls, <strong>Copy as Markdown</strong>, and <strong>Create Ticket</strong>.</li>
+</ul>
+<h2 id="may-26-2026"><a href="#may-26-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>May 26, 2026</h2>
+<h3 id="whitebox-11"><a href="#whitebox-11" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="whitebox">Whitebox</span></h3>
+<ul>
+<li>New <strong>Executive Report</strong> under <strong>Download Report</strong> is a pentest summary PDF with a risk rating, a severity summary, and the top 10 findings.</li>
+</ul>
+<h3 id="review-15"><a href="#review-15" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li><a href="/docs/platform/repositories/gitlab">GitLab</a> merge requests on GitLab.com and self-hosted GitLab can now be reviewed, with findings on the merge request and a commit status.</li>
+<li>A finding that repeats an earlier one is now linked to it, and its pull request comment shows <strong>Duplicate of:</strong> with a link to the original.</li>
+<li>Hacktron now reacts with a thumbs-up to a pull request comment when it accepts the triage command in it.</li>
+</ul>
+<h3 id="platform-18"><a href="#platform-18" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li>New <strong>Create on Jira</strong> on a finding files a <a href="/docs/platform/project-management/jira">Jira</a> ticket, with the project, issue type, labels, assignee, and priority editable first.</li>
+<li>Jira settings now set a default project, issue type, labels, and assignee, a severity to priority mapping, and <strong>Automatically create tickets</strong>.</li>
+<li>Comments and status changes on a finding from the web app, the API, or a GitHub pull request now post as replies in its <a href="/docs/platform/communication-apps/slack">Slack</a> thread.</li>
+<li>Signup can now connect GitLab with <strong>Use GitLab instead</strong>.</li>
+</ul>
+<h2 id="may-19-2026"><a href="#may-19-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>May 19, 2026</h2>
+<h3 id="review-16"><a href="#review-16" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li>Admins can now restart a failed or stopped pull request review with <strong>Restart</strong>.</li>
+<li><strong>PR Reviews</strong> now shows each pull request’s number.</li>
+</ul>
+<h3 id="platform-19"><a href="#platform-19" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li>The <a href="/docs/platform/dashboard">dashboard</a> now has <strong>Overview</strong>, <strong>PR <span data-product="review">Review</span></strong>, and <strong><span data-product="whitebox">Whitebox</span> Scan</strong> tabs.</li>
+<li>New <strong>Affected Code Flow</strong> tab on a finding shows its taint trace from source to sink, or a call graph when there is no trace.</li>
+<li><a href="/docs/platform/project-management/linear">Linear</a> tickets can now go to a <strong>Default project</strong>, with a priority that follows the finding’s severity.</li>
+<li>Moving a Linear issue to a completed state now resolves its finding, and moving it out reopens the finding.</li>
+<li>New <strong>Backfill existing findings</strong> in Linear settings creates tickets for approved findings that have none.</li>
+<li>New <strong>Resolution health</strong> on the dashboard shows the mean time to resolve and SLA compliance for each severity.</li>
+<li>New <strong>SLA Thresholds</strong> in <a href="/docs/platform/organization-settings">settings</a> set the resolution days and target for each severity.</li>
+<li>The <strong>PR <span data-product="review">Review</span></strong> tab now shows a security score from 0 to 100, with a banner when it drops below your <strong>Security Score Threshold</strong>.</li>
+<li>New <strong>Export</strong> on the dashboard downloads the open tab as a PDF.</li>
+<li>Findings can now open on their own page with <strong>Open in full page</strong>.</li>
+</ul>
+<h2 id="may-16-2026"><a href="#may-16-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>May 16, 2026</h2>
+<h3 id="review-17"><a href="#review-17" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li>New <strong>Spillover billing</strong> setting lets owners on a paid plan keep <a href="/docs/review/usage">reviews running past the per-seat limit</a>, billed as overage.</li>
+<li>Searching <strong>PR Reviews</strong> now matches pull request numbers.</li>
+</ul>
+<h2 id="may-15-2026"><a href="#may-15-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>May 15, 2026</h2>
+<h3 id="whitebox-12"><a href="#whitebox-12" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="whitebox">Whitebox</span></h3>
+<ul>
+<li>Public pentest pages now show the pentest’s timeline, agents, and findings.</li>
+</ul>
+<h2 id="may-13-2026"><a href="#may-13-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>May 13, 2026</h2>
+<h3 id="review-18"><a href="#review-18" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li>Each developer seat now includes <a href="/docs/review/usage">50 pull request reviews</a> per billing period, and reviews stop at the limit until the next period.</li>
+<li>A pull request now counts once against the limit, however often it is pushed.</li>
+<li>Approved open source repositories now have their own limit of 30 reviews per developer each billing period.</li>
+<li>New <strong>Skip trial</strong> on <a href="/docs/review/billing">Billing</a> ends a trial early and starts the paid plan.</li>
+<li>New <strong>Resubscribe</strong> on Billing restarts a cancelled subscription and restores its seats.</li>
+<li>Running pull request reviews can now be cancelled with <strong>Cancel</strong>.</li>
+<li>Pull request comments now show that <code>!fp</code> and <code>!accepted_risk</code> take an optional reason.</li>
+<li>Open Source Program applications now get an email confirming they were received.</li>
+</ul>
+<h3 id="platform-20"><a href="#platform-20" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li>Owners with a work email and a trial or subscription can now create a <a href="/docs/platform">shared Slack channel</a> with the Hacktron team, at signup or in settings.</li>
+<li>The <strong>Scan</strong> column in Findings now links to the pull request or pentest.</li>
+</ul>
+<h2 id="may-4-2026"><a href="#may-4-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>May 4, 2026</h2>
+<h3 id="review-19"><a href="#review-19" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li>New open source program gives approved open source repositories free pull request reviews.</li>
+<li>Hacktron now adds a 👀 reaction to a pull request while it reviews it, and leaves 👍 when it finds nothing.</li>
+<li>Closing a pull request without merging now cancels its review.</li>
+<li>The <strong>Code <span data-product="review">Review</span></strong> page is now called <strong>PR Reviews</strong>.</li>
+</ul>
+<h3 id="platform-21"><a href="#platform-21" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li>
+<p>New <strong>Triage Comment</strong> button on Hacktron’s Slack finding cards sets a status and adds a comment in one step.</p>
+<figure data-shot="" style="--w: 1040; --h: 780; --inset: 0"><picture data-theme-asset="light"><source type="image/avif" srcset="/shots/review/integrations/slack/slack_triage_comment/light.eaa7ce42.1280.avif 1280w /shots/review/integrations/slack/slack_triage_comment/light.eaa7ce42.2080.avif 2080w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/review/integrations/slack/slack_triage_comment/light.eaa7ce42.webp" alt="A Triage Comment dialog in Slack, with a status and a comment for the finding" width="1040" height="780" loading="lazy" decoding="async"></picture><picture data-theme-asset="dark"><source type="image/avif" srcset="/shots/review/integrations/slack/slack_triage_comment/dark.293f287a.1280.avif 1280w /shots/review/integrations/slack/slack_triage_comment/dark.293f287a.2080.avif 2080w" sizes="(width >= 1752px) calc((822px) * 1.0000), (width >= 1024px) calc((50vw - 36px) * 1.0000), (width >= 600px) calc((100vw - 48px) * 1.0000), calc((100vw - 32px) * 1.0000)"><img src="/shots/review/integrations/slack/slack_triage_comment/dark.293f287a.webp" alt="A Triage Comment dialog in Slack, with a status and a comment for the finding" width="1040" height="780" loading="lazy" decoding="async"></picture><figcaption>A Triage Comment dialog in Slack, with a status and a comment for the finding</figcaption></figure>
+</li>
+<li>
+<p>New <strong>Getting started</strong> checklist walks owners and admins through setting up pentests and code review, and members through linking GitHub.</p>
+</li>
+<li>
+<p><a href="/docs/review/integrations/slack">Slack</a> can now be linked under <strong>Account</strong> &gt; <strong>Connected accounts</strong>, and triage actions in Slack require it.</p>
+</li>
+<li>
+<p>You can now change or set your password under <a href="/docs/platform/account-settings"><strong>Account</strong></a> &gt; <strong>Security</strong>.</p>
+</li>
+</ul>
+<h2 id="april-23-2026"><a href="#april-23-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>April 23, 2026</h2>
+<h3 id="review-20"><a href="#review-20" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li>New <a href="/docs/review"><strong>Code <span data-product="review">Review</span></strong></a> page lists pull request reviews, each linked to its pull request.</li>
+<li>Pull request reviews now show the pull request’s author under <strong>Created by</strong>, not the person who installed the GitHub App.</li>
+</ul>
+<h3 id="platform-22"><a href="#platform-22" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li><strong>Findings</strong> now lists pentest and pull request findings together, with a <strong>Scan</strong> filter and column.</li>
+<li>Affected code in a finding is now syntax-highlighted.</li>
+<li>A finding’s status and severity can now be changed from its card in Slack.</li>
+<li>Admins can now change the organisation’s URL slug in <strong>Organization Settings</strong>.</li>
+</ul>
+<h3 id="api-8"><a href="#api-8" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>API</h3>
+<ul>
+<li>New <a href="/docs/api/repos/list-repos">list repositories</a> endpoint returns your repositories and whether pull request reviews are on for each.</li>
+</ul>
+<h2 id="april-20-2026"><a href="#april-20-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>April 20, 2026</h2>
+<h3 id="whitebox-13"><a href="#whitebox-13" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="whitebox">Whitebox</span></h3>
+<ul>
+<li>New <strong>Context documents</strong> step in the <strong>Run Pentest</strong> wizard adds <a href="/docs/platform/context">context documents</a>, such as a threat model, from your library or as new Markdown uploads.</li>
+<li>The person who starts a pentest now gets an email when it completes, fails, or finishes triage, and <strong>Email notifications</strong> in <strong>Settings</strong> turns these off.</li>
+<li>PDF reports now draw each finding’s trace as a diagram.</li>
+</ul>
+<h3 id="review-21"><a href="#review-21" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li>Pull request comments now link to the finding in Hacktron.</li>
+</ul>
+<h3 id="platform-23"><a href="#platform-23" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li>Finding and scan links shared in <a href="/docs/platform/communication-apps/slack">Slack</a> now unfurl with live status and severity.</li>
+<li>Findings now have <strong>Create Ticket</strong> &gt; <strong>Create on Linear</strong>, which files a Linear issue with the finding’s details.</li>
+<li><a href="/docs/platform/project-management/linear">Linear</a> now has a <strong>Default team</strong> setting and an <strong>Automatically create tickets</strong> toggle.</li>
+<li><a href="/docs/platform/billing">Billing</a> now handles your payment method, billing details, invoices, and cancellation in the app, and buys pentest credits with the card on file.</li>
+</ul>
+<h3 id="api-9"><a href="#api-9" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>API</h3>
+<ul>
+<li>New <a href="/docs/api">REST API</a> at <code>api.hacktron.ai</code> runs pentests, estimates their cost, and lists, exports, and updates scans and findings, with interactive docs at <code>api.hacktron.ai/docs</code>.</li>
+<li>New <strong>API Keys</strong> section in <strong>Organization Settings</strong> creates <a href="/docs/api/authentication">API keys</a> with <strong>Read only</strong> or <strong>Read &amp; Write</strong> access and an optional expiry.</li>
+</ul>
+<h2 id="april-6-2026"><a href="#april-6-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>April 6, 2026</h2>
+<h3 id="whitebox-14"><a href="#whitebox-14" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="whitebox">Whitebox</span></h3>
+<ul>
+<li>The <strong>Run Pentest</strong> wizard can now test a <strong>Public URL</strong> or an <strong>Upload archive</strong> (ZIP, 7Z, or TAR.GZ), as well as <strong>Connected repos</strong>.</li>
+<li>Admins can now run pentests and buy credits, not only owners.</li>
+<li>Pentests whose findings are being triaged now show <strong>Triaging</strong>, not <strong>Pending</strong>.</li>
+</ul>
+<h3 id="platform-24"><a href="#platform-24" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li>Findings now show a <strong>Trace</strong> diagram of how the vulnerability moves through your code.</li>
+<li>You can now connect more than one <a href="/docs/platform/repositories/github">GitHub</a> organisation with <strong>Add GitHub organization</strong>.</li>
+<li>Comments in a finding’s <strong>Activity</strong> now render Markdown, with <strong>Write</strong> and <strong>Preview</strong> tabs.</li>
+<li>New <a href="/docs/platform/organization-settings"><strong>Organization Settings</strong></a> page lets admins rename the organisation.</li>
+</ul>
+<h2 id="march-23-2026"><a href="#march-23-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>March 23, 2026</h2>
+<h3 id="whitebox-15"><a href="#whitebox-15" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="whitebox">Whitebox</span></h3>
+<ul>
+<li>A pentest’s page now shows a notice while its findings are being triaged.</li>
+<li>The live pentest page now shows why each dismissed finding was dismissed.</li>
+</ul>
+<h3 id="platform-25"><a href="#platform-25" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li>Findings now have an <a href="/docs/review/findings-feedback"><strong>Activity</strong></a> thread with comments and status changes from the web app, Slack, and GitHub.</li>
+<li>Changing a finding’s status now asks for an optional reason.</li>
+<li>New <strong>Copy as Markdown</strong> button copies a finding as a Markdown report.</li>
+</ul>
+<h2 id="march-18-2026"><a href="#march-18-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>March 18, 2026</h2>
+<h3 id="whitebox-16"><a href="#whitebox-16" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="whitebox">Whitebox</span></h3>
+<ul>
+<li>New live page for a running pentest shows its <a href="/docs/whitebox/logs">timeline</a>, findings as agents validate them, and the agents at work.</li>
+<li>New <strong>Cost estimation</strong> step in the <strong>Run Pentest</strong> wizard estimates the credits a pentest needs before you start.</li>
+<li>New <strong>Download PDF Report</strong> button on a pentest generates a <a href="/docs/whitebox/findings-and-reports">PDF report</a> of its findings.</li>
+<li>A pentest can now cover more than one repository.</li>
+<li>New <strong>Pentests</strong> tab in <strong>Billing</strong> buys <a href="/docs/whitebox/billing">pentest credits</a> with <strong>Buy credits</strong>.</li>
+<li>Pentests can now be saved as drafts and resumed later.</li>
+</ul>
+<h3 id="review-22"><a href="#review-22" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li>Dev seats are now called <a href="/docs/review/billing"><strong>Code <span data-product="review">Review</span> seats</strong></a>.</li>
+<li>Free trials now have no seat limit, with up to 200 pull request reviews per seat.</li>
+<li>After a trial ends, auto-assignment now stops at 50 seats, up from 10.</li>
+<li>A new push to a pull request is now reviewed only for the changes since the previous push.</li>
+<li>Pull request comments now have an <strong>Open in Claude</strong> button next to <strong>Open in Cursor</strong>.</li>
+</ul>
+<h3 id="platform-26"><a href="#platform-26" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>Platform</h3>
+<ul>
+<li>New <strong>Promotion code</strong> field in <strong>Billing</strong> applies a Stripe promotion code to your subscription.</li>
+<li>You can now leave an organisation with <strong>Leave organization</strong> in the user menu.</li>
+</ul>
+<h2 id="march-1-2026"><a href="#march-1-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>March 1, 2026</h2>
+<h3 id="whitebox-17"><a href="#whitebox-17" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="whitebox">Whitebox</span></h3>
+<ul>
+<li>Pentests are now paid for with <a href="/docs/whitebox/billing">pentest credits</a>, bought through Stripe at the <strong>Checkout</strong> step of the <strong>Run Pentest</strong> wizard.</li>
+</ul>
+<h3 id="review-23"><a href="#review-23" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li>Pull request comments now have an <strong>Open in Cursor</strong> button that opens a fix prompt in Cursor.</li>
+</ul>
+<h2 id="february-18-2026"><a href="#february-18-2026" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a>February 18, 2026</h2>
+<h3 id="review-24"><a href="#review-24" aria-hidden="true" tabindex="-1" data-heading-anchor=""></a><span data-product="review">Review</span></h3>
+<ul>
+<li>New <a href="/docs/review/billing">per-seat billing</a> with a 14-day free trial: a <strong>Dev seat</strong> covers one developer’s pull requests and a <strong>Sec seat</strong> covers the CLI and VS Code extension.</li>
+<li><a href="/docs/review/people">People</a> can now assign Dev seats automatically as developers open pull requests, up to a seat limit you set.</li>
+<li>New <strong>PR Scan Branches</strong> setting in <strong>Repositories</strong> limits a GitHub repository’s pull request reviews to up to two target branches.</li>
+</ul>
+ </prose-content> <article-end data-astro-cid-scd62v54="true"> <nav aria-label="Previous and next" data-astro-cid-gfcwjq6c> <p data-astro-cid-gfcwjq6c>
+Previous
+<br data-astro-cid-gfcwjq6c> <a href="/docs/mcp" rel="prev" data-astro-cid-gfcwjq6c> MCP </a> </p>  </nav> </article-end> </article> <button type="button" hidden data-justify-toggle aria-keyshortcuts="R" data-astro-cid-scd62v54>
+Justification
+</button>  </main> <footer data-astro-cid-jo6i4kqk> <a href="/" data-logo="mark" data-astro-cid-jo6i4kqk><span data-sr-only data-astro-cid-jo6i4kqk>Hacktron</span></a> <nav data-list="products" aria-label="Products" data-astro-cid-jo6i4kqk> <p data-astro-cid-jo6i4kqk>Products</p> <ul data-astro-cid-jo6i4kqk> <li data-astro-cid-jo6i4kqk> <a href="/products/red" data-plain-link class="astro-jo6i4kqk" data-astro-cid-jo6i4kqk> <span data-product="red" data-astro-cid-jo6i4kqk>Red</span>  </a> </li><li data-astro-cid-jo6i4kqk> <a href="/products/whitebox" data-plain-link class="astro-jo6i4kqk" data-astro-cid-jo6i4kqk> <span data-product="whitebox" data-astro-cid-jo6i4kqk>Whitebox</span>  </a> </li><li data-astro-cid-jo6i4kqk> <a href="/products/review" data-plain-link class="astro-jo6i4kqk" data-astro-cid-jo6i4kqk> <span data-product="review" data-astro-cid-jo6i4kqk>Review</span>  </a> </li><li data-astro-cid-jo6i4kqk> <a href="/products/automations" data-plain-link class="astro-jo6i4kqk" data-astro-cid-jo6i4kqk> <span data-astro-cid-jo6i4kqk>Automations</span>  </a> </li><li data-astro-cid-jo6i4kqk> <a href="/#pricing" data-plain-link class="astro-jo6i4kqk" data-astro-cid-jo6i4kqk> <span data-astro-cid-jo6i4kqk>Pricing</span>  </a> </li> </ul> </nav><nav data-list="company" aria-label="Company" data-astro-cid-jo6i4kqk> <p data-astro-cid-jo6i4kqk>Company</p> <ul data-astro-cid-jo6i4kqk> <li data-astro-cid-jo6i4kqk> <a href="/about" data-plain-link class="astro-jo6i4kqk" data-astro-cid-jo6i4kqk> <span data-astro-cid-jo6i4kqk>About</span>  </a> </li><li data-astro-cid-jo6i4kqk> <a href="/team" data-plain-link class="astro-jo6i4kqk" data-astro-cid-jo6i4kqk> <span data-astro-cid-jo6i4kqk>Team</span>  </a> </li><li data-astro-cid-jo6i4kqk> <a href="/careers" data-plain-link class="astro-jo6i4kqk" data-astro-cid-jo6i4kqk> <span data-astro-cid-jo6i4kqk>Careers</span>  </a> </li><li data-astro-cid-jo6i4kqk> <a href="/media" data-plain-link class="astro-jo6i4kqk" data-astro-cid-jo6i4kqk> <span data-astro-cid-jo6i4kqk>Media</span>  </a> </li><li data-astro-cid-jo6i4kqk> <a href="/contact" data-plain-link class="astro-jo6i4kqk" data-astro-cid-jo6i4kqk> <span data-astro-cid-jo6i4kqk>Contact</span>  </a> </li> </ul> </nav><nav data-list="resources" aria-label="Resources" data-astro-cid-jo6i4kqk> <p data-astro-cid-jo6i4kqk>Resources</p> <ul data-astro-cid-jo6i4kqk> <li data-astro-cid-jo6i4kqk> <a href="/blog" data-plain-link class="astro-jo6i4kqk" data-astro-cid-jo6i4kqk> <span data-astro-cid-jo6i4kqk>Blog</span>  </a> </li><li data-astro-cid-jo6i4kqk> <a href="/docs" data-plain-link class="astro-jo6i4kqk" data-astro-cid-jo6i4kqk> <span data-astro-cid-jo6i4kqk>Docs</span>  </a> </li><li data-astro-cid-jo6i4kqk> <a href="/faq" data-plain-link class="astro-jo6i4kqk" data-astro-cid-jo6i4kqk> <span data-astro-cid-jo6i4kqk>FAQ</span>  </a> </li><li data-astro-cid-jo6i4kqk> <a href="/customers" data-plain-link class="astro-jo6i4kqk" data-astro-cid-jo6i4kqk> <span data-astro-cid-jo6i4kqk>Customers</span>  </a> </li><li data-astro-cid-jo6i4kqk> <a href="/status" data-plain-link class="astro-jo6i4kqk" data-astro-cid-jo6i4kqk> <span data-astro-cid-jo6i4kqk>Status</span> <status-mark data-copy="{&quot;operational&quot;:&quot;All systems operational&quot;,&quot;maintenance&quot;:&quot;Under maintenance&quot;,&quot;degraded&quot;:&quot;Some systems degraded&quot;,&quot;downtime&quot;:&quot;Some systems down&quot;}" data-astro-cid-lwy7f2dc="true"><span data-sr-only data-astro-cid-lwy7f2dc></span></status-mark> </a> </li><li data-astro-cid-jo6i4kqk> <a href="/trust" data-plain-link class="astro-jo6i4kqk" data-astro-cid-jo6i4kqk> <span data-astro-cid-jo6i4kqk>Trust</span>  </a> </li> </ul> </nav><nav data-list="social" aria-label="Social" data-astro-cid-jo6i4kqk> <p data-astro-cid-jo6i4kqk>Social</p> <ul data-astro-cid-jo6i4kqk> <li data-astro-cid-jo6i4kqk> <a href="https://www.linkedin.com/company/hacktron/" data-plain-link target="_blank" rel="noreferrer" class="astro-jo6i4kqk" data-astro-cid-jo6i4kqk> <span data-astro-cid-jo6i4kqk>LinkedIn</span>  </a> </li><li data-astro-cid-jo6i4kqk> <a href="https://x.com/HacktronAI" data-plain-link target="_blank" rel="noreferrer" class="astro-jo6i4kqk" data-astro-cid-jo6i4kqk> <span data-astro-cid-jo6i4kqk>X</span>  </a> </li><li data-astro-cid-jo6i4kqk> <a href="https://github.com/hacktronai" data-plain-link target="_blank" rel="noreferrer" class="astro-jo6i4kqk" data-astro-cid-jo6i4kqk> <span data-astro-cid-jo6i4kqk>GitHub</span>  </a> </li><li data-astro-cid-jo6i4kqk> <a href="https://discord.gg/eRHCHsvDKh" data-plain-link target="_blank" rel="noreferrer" class="astro-jo6i4kqk" data-astro-cid-jo6i4kqk> <span data-astro-cid-jo6i4kqk>Discord</span>  </a> </li><li data-astro-cid-jo6i4kqk> <a href="/rss.xml" data-plain-link class="astro-jo6i4kqk" data-astro-cid-jo6i4kqk> <span data-astro-cid-jo6i4kqk>RSS</span>  </a> </li> </ul> </nav> <address data-astro-cid-jo6i4kqk>
+©2026
+Hacktron AI Inc.<br data-astro-cid-jo6i4kqk>2261 Market Street STE 33539<br data-astro-cid-jo6i4kqk>San Francisco, CA 94114
+</address> <ul data-list="legal" data-astro-cid-jo6i4kqk> <li data-astro-cid-jo6i4kqk> <a href="/terms-of-service" data-plain-link data-astro-cid-jo6i4kqk> Terms </a> </li><li data-astro-cid-jo6i4kqk> <a href="/privacy-policy" data-plain-link data-astro-cid-jo6i4kqk> Privacy </a> </li><li data-astro-cid-jo6i4kqk> <a href="/cookie-notice" data-plain-link data-astro-cid-jo6i4kqk> Cookies </a> </li><li data-astro-cid-jo6i4kqk> <a href="/master-services-agreement" data-plain-link data-astro-cid-jo6i4kqk> MSA </a> </li><li data-astro-cid-jo6i4kqk> <a href="/service-level-agreement" data-plain-link data-astro-cid-jo6i4kqk> SLA </a> </li><li data-astro-cid-jo6i4kqk> <a href="/disclosure-policy" data-plain-link data-astro-cid-jo6i4kqk> Disclosure </a> </li><li data-astro-cid-jo6i4kqk> <a href="/credits" data-plain-link data-astro-cid-jo6i4kqk> Credits </a> </li> <li data-shortcuts data-astro-cid-jo6i4kqk> <button type="button" commandfor="shortcuts" command="show-modal" aria-keyshortcuts="I" data-astro-cid-jo6i4kqk> Shortcuts
+[I]
+</button> </li> <li data-astro-cid-jo6i4kqk> <button type="button" commandfor="languages" command="show-modal" aria-keyshortcuts="G" data-astro-cid-jo6i4kqk> Language
+[G]
+</button> </li> </ul> </footer> </page-content> <button type="button" data-button data-find-trigger commandfor="find" command="show-modal" aria-keyshortcuts="F" aria-label="Find [F]" data-astro-cid-x2erw733> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true" data-astro-cid-x2erw733="true"><circle cx="7" cy="7" r="4.5" /><path d="M10.25 10.25l3.25 3.25" /></svg> <span data-astro-cid-x2erw733>Find [F]</span> </button> <dialog id="find" aria-label="Find" data-scope="docs" data-astro-cid-x2erw733> <find-card data-astro-cid-x2erw733="true"> <form role="search" data-astro-cid-x2erw733> <label for="find-input" data-astro-cid-x2erw733>hacktron/<span data-docs-prompt data-astro-cid-x2erw733>docs/</span></label> <input id="find-input" type="text" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="true" aria-controls="find-results" data-astro-cid-x2erw733> <button type="button" data-back data-astro-cid-x2erw733>Back [⌫]</button> </form> <ul id="find-results" role="listbox" aria-label="Results" data-astro-cid-x2erw733> <li role="option" data-suggestion="site" data-astro-cid-x2erw733> <a href="/about" data-astro-cid-x2erw733> <span data-astro-cid-x2erw733>About</span> <span data-path data-astro-cid-x2erw733> /about  </span> </a> </li><li role="option" data-suggestion="site" data-astro-cid-x2erw733> <a href="/blog" data-astro-cid-x2erw733> <span data-astro-cid-x2erw733>Blog</span> <span data-path data-astro-cid-x2erw733> /blog  </span> </a> </li><li role="option" data-suggestion="site" data-astro-cid-x2erw733> <a href="/customers" data-astro-cid-x2erw733> <span data-astro-cid-x2erw733>Customers</span> <span data-path data-astro-cid-x2erw733> /customers  </span> </a> </li><li role="option" data-suggestion="site" data-astro-cid-x2erw733> <a href="/products/red" data-astro-cid-x2erw733> <span data-product="red" data-astro-cid-x2erw733>Red</span> <span data-path data-astro-cid-x2erw733> /products/red  </span> </a> </li><li role="option" data-suggestion="site" data-astro-cid-x2erw733> <a href="/products/whitebox" data-astro-cid-x2erw733> <span data-product="whitebox" data-astro-cid-x2erw733>Whitebox</span> <span data-path data-astro-cid-x2erw733> /products/whitebox  </span> </a> </li><li role="option" data-suggestion="site" data-astro-cid-x2erw733> <a href="/products/review" data-astro-cid-x2erw733> <span data-product="review" data-astro-cid-x2erw733>Review</span> <span data-path data-astro-cid-x2erw733> /products/review  </span> </a> </li><li role="option" data-suggestion="site" data-astro-cid-x2erw733> <a href="/#pricing" data-astro-cid-x2erw733> <span data-astro-cid-x2erw733>Pricing</span> <span data-path data-astro-cid-x2erw733> /#pricing  </span> </a> </li><li role="option" data-suggestion="site" data-astro-cid-x2erw733> <a href="/docs" data-astro-cid-x2erw733> <span data-astro-cid-x2erw733>Docs</span> <span data-path data-astro-cid-x2erw733> /docs  </span> </a> </li><li role="option" data-suggestion="docs" data-astro-cid-x2erw733> <a href="/docs" data-astro-cid-x2erw733> <span data-astro-cid-x2erw733>Platform</span> <span data-path data-astro-cid-x2erw733> /docs  </span> </a> </li><li role="option" data-suggestion="docs" data-astro-cid-x2erw733> <a href="/docs/review" data-astro-cid-x2erw733> <span data-astro-cid-x2erw733>Review</span> <span data-path data-astro-cid-x2erw733> /docs/review  </span> </a> </li><li role="option" data-suggestion="docs" data-astro-cid-x2erw733> <a href="/docs/whitebox" data-astro-cid-x2erw733> <span data-astro-cid-x2erw733>Whitebox</span> <span data-path data-astro-cid-x2erw733> /docs/whitebox  </span> </a> </li><li role="option" data-suggestion="docs" data-astro-cid-x2erw733> <a href="/docs/api" data-astro-cid-x2erw733> <span data-astro-cid-x2erw733>API</span> <span data-path data-astro-cid-x2erw733> /docs/api  </span> </a> </li><li role="option" data-suggestion="docs" data-astro-cid-x2erw733> <a href="/docs/mcp" data-astro-cid-x2erw733> <span data-astro-cid-x2erw733>MCP</span> <span data-path data-astro-cid-x2erw733> /docs/mcp  </span> </a> </li><li role="option" data-suggestion="docs" data-astro-cid-x2erw733> <a href="/docs/changelog" data-astro-cid-x2erw733> <span data-astro-cid-x2erw733>Changelog</span> <span data-path data-astro-cid-x2erw733> /docs/changelog  </span> </a> </li> </ul> <template data-astro-cid-x2erw733> <li role="option" data-astro-cid-x2erw733> <a data-astro-cid-x2erw733><span data-astro-cid-x2erw733></span><span data-path data-astro-cid-x2erw733></span></a> </li> </template> <find-keys data-astro-cid-x2erw733="true"> <span data-astro-cid-x2erw733>[↓] [↑]</span> <span data-astro-cid-x2erw733>[enter] to visit</span> </find-keys> </find-card> <button type="button" data-button commandfor="find" command="close" data-astro-cid-x2erw733> Close
+[esc]
+</button> </dialog><script type="module" src="/_astro/Find.astro_astro_type_script_index_0_lang.CfP_5UY7.js"></script> <dialog id="shortcuts" aria-label="Keyboard shortcuts" data-astro-cid-aiqoecje> <dl data-astro-cid-aiqoecje> <div data-key="M" data-astro-cid-aiqoecje> <dt data-astro-cid-aiqoecje>Menu</dt> <dd data-astro-cid-aiqoecje> <kbd data-astro-cid-aiqoecje>[M]</kbd> </dd> </div><div data-key="J" data-astro-cid-aiqoecje> <dt data-astro-cid-aiqoecje>Next in menu</dt> <dd data-astro-cid-aiqoecje> <kbd data-astro-cid-aiqoecje>[J]</kbd> </dd> </div><div data-key="K" data-astro-cid-aiqoecje> <dt data-astro-cid-aiqoecje>Previous in menu</dt> <dd data-astro-cid-aiqoecje> <kbd data-astro-cid-aiqoecje>[K]</kbd> </dd> </div><div data-key="F" data-astro-cid-aiqoecje> <dt data-astro-cid-aiqoecje>Find</dt> <dd data-astro-cid-aiqoecje> <kbd data-astro-cid-aiqoecje>[F]</kbd> </dd> </div><div data-key="A" data-astro-cid-aiqoecje> <dt data-astro-cid-aiqoecje>Ask</dt> <dd data-astro-cid-aiqoecje> <kbd data-astro-cid-aiqoecje>[A]</kbd> </dd> </div><div data-key="S" data-astro-cid-aiqoecje> <dt data-astro-cid-aiqoecje>Sign in</dt> <dd data-astro-cid-aiqoecje> <kbd data-astro-cid-aiqoecje>[S]</kbd> </dd> </div><div data-key="C" data-astro-cid-aiqoecje> <dt data-astro-cid-aiqoecje>Copy page</dt> <dd data-astro-cid-aiqoecje> <kbd data-astro-cid-aiqoecje>[C]</kbd> </dd> </div><div data-key="L" data-astro-cid-aiqoecje> <dt data-astro-cid-aiqoecje>Listen</dt> <dd data-astro-cid-aiqoecje> <kbd data-astro-cid-aiqoecje>[L]</kbd> </dd> </div><div data-key="R" data-astro-cid-aiqoecje> <dt data-astro-cid-aiqoecje>Justification</dt> <dd data-astro-cid-aiqoecje> <kbd data-astro-cid-aiqoecje>[R]</kbd> </dd> </div><div data-key="G" data-astro-cid-aiqoecje> <dt data-astro-cid-aiqoecje>Language</dt> <dd data-astro-cid-aiqoecje> <kbd data-astro-cid-aiqoecje>[G]</kbd> </dd> </div><div data-key="D" data-astro-cid-aiqoecje> <dt data-astro-cid-aiqoecje>Dark mode</dt> <dd data-astro-cid-aiqoecje> <kbd data-astro-cid-aiqoecje>[D]</kbd> </dd> </div><div data-key="H" data-astro-cid-aiqoecje> <dt data-astro-cid-aiqoecje>High contrast</dt> <dd data-astro-cid-aiqoecje> <kbd data-astro-cid-aiqoecje>[H]</kbd> </dd> </div><div data-key="I" data-astro-cid-aiqoecje> <dt data-astro-cid-aiqoecje>Shortcuts</dt> <dd data-astro-cid-aiqoecje> <kbd data-astro-cid-aiqoecje>[I]</kbd> </dd> </div><div data-key="Esc" data-astro-cid-aiqoecje> <dt data-astro-cid-aiqoecje>Close</dt> <dd data-astro-cid-aiqoecje> <kbd data-astro-cid-aiqoecje>[Esc]</kbd> </dd> </div> </dl> </dialog> <button type="button" hidden data-theme-toggle aria-keyshortcuts="D" data-astro-cid-aiqoecje> Dark mode </button> <button type="button" hidden data-contrast-toggle aria-keyshortcuts="H" data-astro-cid-aiqoecje> High contrast </button><script type="module">var e=document.documentElement,t=document.querySelector(`#shortcuts`);document.addEventListener(`keydown`,e=>{let{key:n,metaKey:r,ctrlKey:i,altKey:a,shiftKey:o,repeat:s,target:c}=e;if(e.defaultPrevented||s||r||i||a||o||c instanceof HTMLElement&&(c.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(c.tagName)))return;if(t.open&&n.length===1&&(t.close(),n.toLowerCase()===`i`))return e.preventDefault();if(document.querySelector(`dialog:modal`))return;let l=document.querySelector(`[aria-keyshortcuts="${CSS.escape(n.toUpperCase())}"]`);l&&(e.preventDefault(),l.click())}),document.querySelector(`[data-theme-toggle]`)?.addEventListener(`click`,()=>{let t=e.dataset.theme===`dark`||!e.dataset.theme&&matchMedia(`(prefers-color-scheme: dark)`).matches;e.dataset.theme=t?`light`:`dark`,localStorage.setItem(`hacktron.theme`,e.dataset.theme)}),t.addEventListener(`click`,e=>{e.target===t&&t.close()}),document.querySelector(`[data-contrast-toggle]`)?.addEventListener(`click`,()=>{e.toggleAttribute(`data-contrast`)});</script> <dialog id="languages" aria-label="Language" data-astro-cid-klrt5dbh> <ul data-astro-cid-klrt5dbh> <li data-astro-cid-klrt5dbh> <a href="/docs/changelog" hreflang="en-US" lang="en-US" aria-current="true" autofocus data-astro-cid-klrt5dbh> English </a> </li><li data-astro-cid-klrt5dbh> <a href="/de" hreflang="de" lang="de" data-astro-cid-klrt5dbh> Deutsch </a> </li><li data-astro-cid-klrt5dbh> <a href="/es" hreflang="es" lang="es" data-astro-cid-klrt5dbh> Español </a> </li><li data-astro-cid-klrt5dbh> <a href="/fr" hreflang="fr" lang="fr" data-astro-cid-klrt5dbh> Français </a> </li><li data-astro-cid-klrt5dbh> <a href="/pt" hreflang="pt-BR" lang="pt-BR" data-astro-cid-klrt5dbh> Português </a> </li><li data-astro-cid-klrt5dbh> <a href="/zh" hreflang="zh-Hans" lang="zh-Hans" data-astro-cid-klrt5dbh> 中文 </a> </li><li data-astro-cid-klrt5dbh> <a href="/ja" hreflang="ja" lang="ja" data-astro-cid-klrt5dbh> 日本語 </a> </li><li data-astro-cid-klrt5dbh> <a href="/ko" hreflang="ko" lang="ko" data-astro-cid-klrt5dbh> 한국어 </a> </li> </ul> </dialog><script type="module">var e=document.querySelector(`#languages`),t=[...e.querySelectorAll(`a`)];function n(e){let n=t.indexOf(document.activeElement);t.at((n+e)%t.length)?.focus()}e.addEventListener(`keydown`,e=>{if(e.metaKey||e.ctrlKey||e.altKey)return;let t=e.key.toLowerCase();if(t===`g`||t===`j`||t===`arrowdown`)n(1);else if(t===`k`||t===`arrowup`)n(-1);else return;e.preventDefault()}),e.addEventListener(`pointermove`,e=>{let t=e.target.closest(`a`);t&&t!==document.activeElement&&t.focus({preventScroll:!0})}),e.addEventListener(`click`,t=>{t.target===e&&e.close()});</script> <site-lightbox data-astro-cid-utnzf2kr="true"> <dialog aria-label="Image" tabindex="-1" data-astro-cid-utnzf2kr> <img alt="" draggable="false" data-astro-cid-utnzf2kr> </dialog> </site-lightbox><script type="module">var e=`prose-content figure img`,t=1.5,n=(e,t)=>Math.hypot(e.x-t.x,e.y-t.y),r=(e,t)=>({x:(e.x+t.x)/2,y:(e.y+t.y)/2}),i=e=>({x:e.clientX,y:e.clientY}),a=()=>({x:innerWidth/2,y:innerHeight/2});function o(t){return t instanceof HTMLImageElement&&t.matches(e)?t:null}var s=class extends HTMLElement{#e=this.querySelector(`dialog`);#t=this.querySelector(`img`);#n=1;#r=0;#i=0;#a=new Map;#o=null;#s=null;#c=!1;#l=!1;connectedCallback(){for(let t of document.querySelectorAll(e))t.tabIndex=0;document.addEventListener(`click`,e=>{let t=o(e.target);!t||e.button!==0||e.metaKey||e.ctrlKey||(e.preventDefault(),this.#u(t))}),document.addEventListener(`keydown`,e=>{let t=o(e.target);!t||e.key!==`Enter`&&e.key!==` `||(e.preventDefault(),this.#u(t))}),addEventListener(`keydown`,e=>this.#g(e),{capture:!0}),addEventListener(`resize`,()=>this.#h());let t=this.#e;t.addEventListener(`close`,()=>this.#d()),t.addEventListener(`wheel`,e=>this.#_(e),{passive:!1}),t.addEventListener(`pointerdown`,e=>this.#v(e)),t.addEventListener(`pointermove`,e=>this.#y(e)),t.addEventListener(`pointerup`,e=>this.#b(e)),t.addEventListener(`pointercancel`,e=>this.#b(e))}#u(e){if(!this.#e.open){if(this.#t.src=e.currentSrc||e.src,this.#t.alt=e.alt,e.src!==this.#t.src){let t=new Image;t.src=e.src,t.decode().then(()=>{this.#e.open&&this.#t.alt===e.alt&&(this.#t.src=t.src)}).catch(()=>void 0)}this.#d(),this.#e.showModal(),this.#e.focus()}}#d(){this.#n=1,this.#r=0,this.#i=0,this.#a.clear(),this.#o=null,this.#h()}#f(){let{naturalWidth:e,offsetWidth:t}=this.#t;return!e||!t?4:Math.max(4,2*e/t)}#p(e,t,n=!1){let r=Math.min(this.#f(),Math.max(1,e)),i=a(),o=(t.x-i.x-this.#r)/this.#n,s=(t.y-i.y-this.#i)/this.#n;this.#r=t.x-i.x-o*r,this.#i=t.y-i.y-s*r,this.#n=r,this.#h(n)}#m(e,t,n=!1){this.#r+=e,this.#i+=t,this.#h(n)}#h(e=!1){let t=this.#t,n=Math.max(0,(t.offsetWidth*this.#n-innerWidth)/2),r=Math.max(0,(t.offsetHeight*this.#n-innerHeight)/2);this.#r=Math.min(n,Math.max(-n,this.#r)),this.#i=Math.min(r,Math.max(-r,this.#i)),t.toggleAttribute(`data-animate`,e),t.toggleAttribute(`data-zoomed`,this.#n>1),t.style.setProperty(`--x`,`${this.#r}px`),t.style.setProperty(`--y`,`${this.#i}px`),t.style.setProperty(`--scale`,String(this.#n))}#g(e){if(!this.#e.open||(e.stopPropagation(),e.metaKey||e.ctrlKey||e.altKey))return;let n={"+":()=>this.#p(this.#n*t,a(),!0),"=":()=>this.#p(this.#n*t,a(),!0),"-":()=>this.#p(this.#n/t,a(),!0),0:()=>this.#p(1,a(),!0),ArrowLeft:()=>this.#m(80,0,!0),ArrowRight:()=>this.#m(-80,0,!0),ArrowUp:()=>this.#m(0,80,!0),ArrowDown:()=>this.#m(0,-80,!0)}[e.key];n&&(e.preventDefault(),n())}#_(e){e.preventDefault();let t=e.ctrlKey?.01:.002,n=e.deltaMode===1?e.deltaY*16:e.deltaY;this.#p(this.#n*Math.exp(-n*t),i(e))}#v(e){this.#e.setPointerCapture(e.pointerId);let t=i(e);if(this.#a.set(e.pointerId,t),this.#a.size===1)this.#s=t,this.#c=e.target===this.#t,this.#l=!1;else if(this.#a.size===2){let[e,t]=this.#a.values();this.#o={distance:n(e,t),mid:r(e,t)},this.#l=!0}}#y(e){let t=this.#a.get(e.pointerId);if(!t)return;let a=i(e);if(this.#a.set(e.pointerId,a),this.#s&&n(a,this.#s)>6&&(this.#l=!0),this.#o&&this.#a.size===2){let[e,t]=this.#a.values(),i=r(e,t);this.#m(i.x-this.#o.mid.x,i.y-this.#o.mid.y),this.#p(this.#n*(n(e,t)/this.#o.distance),i),this.#o={distance:n(e,t),mid:i}}else this.#a.size===1&&this.#n>1&&(this.#t.toggleAttribute(`data-dragging`,!0),this.#m(a.x-t.x,a.y-t.y))}#b(e){if(!this.#a.delete(e.pointerId)||(this.#a.size<2&&(this.#o=null),this.#a.size>0)||(this.#t.removeAttribute(`data-dragging`),this.#l||e.type===`pointercancel`))return;if(!this.#c)return this.#e.close();let t=this.#n>1?1:Math.min(this.#f(),2.5);this.#p(t,i(e),!0)}};customElements.define(`site-lightbox`,s);</script> <script type="module">var e=document.documentElement,t=0;addEventListener(`scroll`,()=>{e.hasAttribute(`data-page-scrolling`)||e.setAttribute(`data-page-scrolling`,``),clearTimeout(t),t=window.setTimeout(()=>e.removeAttribute(`data-page-scrolling`),200)},{passive:!0});</script> </body> </html>

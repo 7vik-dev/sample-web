@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: sample-web
+    runtime: static
+    buildCommand: echo "Static site ready"
+    staticPublishPath: ./www.hacktron.ai
+    pullRequestPreviewsEnabled: false
