@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: sample-web
+    name: northcypher
     runtime: static
     buildCommand: echo "Static site ready"
     staticPublishPath: ./www.hacktron.ai
